@@ -64,7 +64,7 @@
       "prettier --write --ignore-unknown"
     ]
   },
-  "homepage": "https://dmitrijpedan.github.io",
+  "homepage": "https://dmitrijpedan.github.io/",
   "engines": {
     "node": ">=18 <19"
   }
