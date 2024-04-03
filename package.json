@@ -22,7 +22,9 @@
     "test": "react-scripts test",
     "format": "npx prettier . --write",
     "lint": "eslint ./src/**/*.**",
-    "lint:fix": "eslint . --fix"
+    "lint:fix": "eslint . --fix",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "browserslist": {
     "production": [
