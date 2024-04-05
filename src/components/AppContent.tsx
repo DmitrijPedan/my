@@ -18,7 +18,7 @@ function AppContent() {
   }, []);
 
   return (
-    <div className="flex min-h-screen flex-col border bg-brand-bg-main">
+    <div className="flex min-h-screen flex-col bg-brand-bg-main">
       {waiting ? (
         <div ref={loaderRef} className="h-full w-full">
           <FullScreenLoader />
