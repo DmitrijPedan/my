@@ -18,22 +18,17 @@ function AppContent() {
   }, []);
 
   return (
-    <div className="flex h-full w-full flex-col overflow-hidden bg-brand-bg-main">
+    <div className="flex min-h-screen flex-col border bg-brand-bg-main">
       {waiting ? (
         <div ref={loaderRef} className="h-full w-full">
           <FullScreenLoader />
         </div>
       ) : (
-        <div className="animate-fade-in-md">
-          <header className="border p-2"></header>
-          <main className="overflow-y-scroll">
-            <h2>Hello</h2>
-            <h2>Hello</h2>
-            <h2>Hello</h2>
-            <h2>Hello</h2>
-            <h2>Hello</h2>
-          </main>
-        </div>
+        <main className="flex h-full animate-fade-in-md">
+          <div className="flex h-full w-full items-center justify-center">
+            <h1 className="text-5xl">dp</h1>
+          </div>
+        </main>
       )}
     </div>
   );
