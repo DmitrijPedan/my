@@ -1,9 +1,13 @@
+import AppContent from "src/components/AppContent";
+// import AppHeader from "src/components/AppHeader";
+import ContentWrapper from "src/components/ContentWrapper";
+
 function App() {
   return (
-    <div className="App">
-      <h1 className="text-xl text-red-500">App</h1>
-      <p>Added pre-commit with husky</p>
-    </div>
+    <ContentWrapper>
+      {/* <AppHeader /> */}
+      <AppContent />
+    </ContentWrapper>
   );
 }
 

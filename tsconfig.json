@@ -14,7 +14,15 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "baseUrl": ".",
+    "paths": {
+      "src": ["src"]
+    }
   },
-  "include": ["src"]
+  "resolve": {
+    "extensions": [".js", ".json", ".ts", ".tsx"]
+  },
+  "include": ["src"],
+  "exclude": ["node_modules"]
 }
