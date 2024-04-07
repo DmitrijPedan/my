@@ -1,0 +1,77 @@
+.border-animation {
+  position: relative;
+  &.hide {
+    .line {
+      &::before,
+      &::after {
+        opacity: 0;
+      }
+    }
+  }
+
+  .line {
+    width: 0;
+    height: 0;
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      background: var(--animated-border-color);
+      transition: opacity 0.5s;
+      animation-duration: var(--animated-border-duration);
+      animation-timing-function: ease-in-out;
+    }
+  }
+
+  .horizontal {
+    &::before,
+    &::after {
+      height: 1px;
+      width: calc(var(--animated-border-offset) * 2 + 100%);
+      animation-name: horizontal-border-animation;
+    }
+    &::before {
+      top: 0;
+      left: calc(var(--animated-border-offset) * -1);
+    }
+    &::after {
+      bottom: 0;
+      right: calc(var(--animated-border-offset) * -1);
+    }
+  }
+
+  .vertical {
+    &::before,
+    &::after {
+      width: 1px;
+      height: calc(var(--animated-border-offset) * 2 + 100%);
+      animation-name: vertical-border-animation;
+    }
+    &::before {
+      left: 0;
+      top: calc(var(--animated-border-offset) * -1);
+    }
+    &::after {
+      right: 0;
+      bottom: calc(var(--animated-border-offset) * -1);
+    }
+  }
+}
+
+@keyframes horizontal-border-animation {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: calc(var(--animated-border-offset) * 2 + 100%);
+  }
+}
+
+@keyframes vertical-border-animation {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: calc(var(--animated-border-offset) * 2 + 100%);
+  }
+}

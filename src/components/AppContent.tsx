@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import BorderAnimatedContainer from "src/components/BorderAnimatedContainer";
 import FullScreenLoader from "src/components/FullScreenLoader";
 
 function AppContent() {
@@ -25,8 +26,10 @@ function AppContent() {
         </div>
       ) : (
         <main className="flex h-full animate-fade-in-md">
-          <div className="flex h-full w-full items-center justify-center">
-            <h1 className="text-5xl">dp</h1>
+          <div className="flex h-full w-full flex-col items-center justify-center">
+            <BorderAnimatedContainer className="p-4">
+              <h1 className="text-5xl">dp</h1>
+            </BorderAnimatedContainer>
           </div>
         </main>
       )}
