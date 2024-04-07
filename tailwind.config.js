@@ -1,9 +1,14 @@
+const defaultTheme = require("tailwindcss/defaultTheme");
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: "selector",
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
+      fontFamily: {
+        raleway: ['"Raleway"', ...defaultTheme.fontFamily.sans],
+      },
       colors: {
         brand: {
           color: {

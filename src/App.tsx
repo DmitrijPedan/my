@@ -1,13 +1,11 @@
 import AppContent from "src/components/AppContent";
-// import AppHeader from "src/components/AppHeader";
-import ContentWrapper from "src/components/ContentWrapper";
+import AppProvider from "src/context/AppProvider";
 
 function App() {
   return (
-    <ContentWrapper>
-      {/* <AppHeader /> */}
+    <AppProvider>
       <AppContent />
-    </ContentWrapper>
+    </AppProvider>
   );
 }
 
