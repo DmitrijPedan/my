@@ -5,6 +5,7 @@ import useTheme from "src/lib/hooks/useTheme";
 
 type AppContextType = {
   currentTheme: ThemeValue;
+  systemTheme: "dark" | "light" | null;
   loading: boolean;
   selectTheme: (theme: ThemeValue) => void;
 };
@@ -13,7 +14,7 @@ const AppContext = createContext<AppContextType | null>(null);
 
 function AppProvider({ children }: { children: React.ReactNode }) {
   const loaderRef = useRef<HTMLDivElement>(null);
-  const { currentTheme, selectTheme } = useTheme();
+  const { currentTheme, systemTheme, selectTheme } = useTheme();
   const [loading, setLoading] = useState<AppContextType["loading"]>(true);
 
   useEffect(() => {
@@ -32,6 +33,7 @@ function AppProvider({ children }: { children: React.ReactNode }) {
     <AppContext.Provider
       value={{
         currentTheme,
+        systemTheme,
         loading,
         selectTheme,
       }}>

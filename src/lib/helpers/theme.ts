@@ -5,16 +5,16 @@ export type Theme = { label: string; value: ThemeValue };
 
 export const ALLOWED_THEMES: Theme[] = [
   {
-    label: "System",
-    value: "system",
-  },
-  {
     label: "Light",
     value: "light",
   },
   {
     label: "Dark",
     value: "dark",
+  },
+  {
+    label: "System",
+    value: "system",
   },
 ];
 

@@ -56,3 +56,16 @@ body.system {
     @include light-theme-colors();
   }
 }
+
+@media (prefers-color-scheme: dark) {
+  body::after {
+    content: "dark";
+    display: none;
+  }
+}
+@media (prefers-color-scheme: light) {
+  body::after {
+    content: "light";
+    display: none;
+  }
+}
