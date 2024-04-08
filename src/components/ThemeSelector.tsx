@@ -44,7 +44,7 @@ function ThemeSelector({ className }: { className?: string }) {
       </button>
       <div
         className={classNames(
-          "absolute bottom-0 right-0 z-10 min-w-36 translate-y-full overflow-hidden",
+          "z-100 absolute bottom-0 right-0 z-50 min-w-36 translate-y-full overflow-hidden",
           opened ? "h-auto py-2" : "h-0 py-0"
         )}>
         <ul className="overflow-hidden rounded-md border bg-brand-bg-muted shadow-md dark:border-none dark:shadow-none">

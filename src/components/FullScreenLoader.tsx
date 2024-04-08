@@ -3,7 +3,7 @@ import React from "react";
 function FullScreenLoader(props: React.HTMLAttributes<HTMLDivElement>) {
   return (
     <div {...props} className="relative flex h-full w-full items-center justify-center ">
-      <div className="absolute left-0 top-0 h-full w-full bg-brand-color-3"></div>
+      <div className="absolute left-0 top-0 h-full w-full bg-brand-bg-muted" />
       <div role="status" className="absolute left-1/2 top-2/4 -translate-x-1/2 -translate-y-1/2">
         <svg
           aria-hidden="true"

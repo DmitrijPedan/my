@@ -4,11 +4,9 @@ import Header from "src/components/Header";
 
 function Page({ children }: { children: React.ReactNode }) {
   return (
-    <div className="flex min-h-screen flex-col overflow-hidden">
+    <div className="relative flex min-h-screen flex-col">
       <Header />
-      <main className="flex grow items-center">
-        <div className="container mx-auto">{children}</div>
-      </main>
+      <main className="container mx-auto">{children}</main>
       <Footer />
     </div>
   );

@@ -16,6 +16,7 @@
     &::after {
       content: "";
       position: absolute;
+      z-index: 40;
       background: var(--animated-border-color);
       transition: opacity 0.5s;
       animation-duration: var(--animated-border-duration);
