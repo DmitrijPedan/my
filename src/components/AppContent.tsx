@@ -1,3 +1,4 @@
+import SocialLinks from "src/components/SocialLinks";
 import Page from "src/layout/Page";
 
 function AppContent() {
@@ -8,6 +9,7 @@ function AppContent() {
           <div className="">
             <h1 className="text-xl sm:text-2xl md:text-3xl">Dmitriy Pedan</h1>
             <h2>Frontend Engineer</h2>
+            <SocialLinks className="mt-10" />
           </div>
         </div>
         <div className="w-7/12">
