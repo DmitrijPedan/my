@@ -3,7 +3,7 @@ import AppProvider from "src/context/AppProvider";
 
 function App() {
   return (
-    <div className="bg-white text-slate-500 dark:bg-slate-900 dark:text-slate-400">
+    <div className="bg-white text-slate-500 dark:bg-slate-900 dark:text-slate-200">
       <AppProvider>
         <AppContent />
       </AppProvider>
