@@ -1,6 +1,29 @@
 import Link from "src/components/Link";
 import SocialLinks from "src/components/SocialLinks";
+import JobCard from "src/components/cards/JobCard";
+import type { JobCardProps } from "src/components/cards/JobCard";
 import Page from "src/layout/Page";
+
+const MY_EXPERIENCE: JobCardProps["job"][] = [
+  {
+    from: "2019",
+    to: "present",
+    company: "Codevery LLC",
+    companyHref: "https://codevery.com",
+    position: "Frontend Engineer",
+    responsibilities: (
+      <ul>
+        <li>Developing and maintaining websites and web applications</li>
+        <li>Collaborating with designers to create responsive and interactive web designs</li>
+        <li>Optimizing web applications for maximum speed and scalability</li>
+        <li>Implementing security protocols to protect sensitive data</li>
+        <li>Writing clean, maintainable, and efficient code</li>
+        <li>Participating in code reviews and team meetings</li>
+      </ul>
+    ),
+    skills: ["HTML/CSS/SCSS", "JavaScript", "React", "Angular", "Node.js", "Adonis.js", "MySQL", "Atlassian"],
+  },
+];
 
 function AppContent() {
   return (
@@ -18,7 +41,7 @@ function AppContent() {
           </div>
         </div>
         <div className="mt-20 w-full pl-0 lg:mt-0 lg:w-7/12 lg:pl-12">
-          <section aria-label="Summary" className="leading-7 dark:text-slate-400">
+          <section aria-label="Summary" className="leading-7 lg:pl-2 dark:text-slate-400">
             <h3 className="sr-only">About me</h3>
             <p className="mb-4">
               Hello, and welcome to my digital space! I’m a passionate and creative web developer dedicated to
@@ -43,7 +66,7 @@ function AppContent() {
             </p>
             <p className="mb-4">
               In this portfolio, you&apos;ll find a
-              <Link aria-label="Go to the Projects section" href="#projects" className="ml-1">
+              <Link aria-label="Go to the Projects section" href="#myProjects" className="ml-1">
                 showcase of my work
               </Link>
               , which includes a range of projects from landing pages to interactive web apps. Each project
@@ -56,6 +79,16 @@ function AppContent() {
               positions or collaborative projects. Let’s connect to explore how we can create the next
               outstanding web experience together!
             </p>
+          </section>
+          <section id="myExperience" className="mt-10">
+            <h3 className="sr-only">My job experience</h3>
+            <ul role="list">
+              {MY_EXPERIENCE.map((job) => (
+                <li key={job.companyHref}>
+                  <JobCard job={job} />
+                </li>
+              ))}
+            </ul>
           </section>
         </div>
       </div>
