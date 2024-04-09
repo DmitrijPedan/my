@@ -5,7 +5,7 @@ function Page({ children }: { children: React.ReactNode }) {
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
-      <main className="container mx-auto px-2 md:px-4">{children}</main>
+      <main className="container mx-auto max-w-6xl px-4 md:px-6">{children}</main>
     </div>
   );
 }
