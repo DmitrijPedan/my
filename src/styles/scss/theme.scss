@@ -34,10 +34,10 @@
   @include light-theme-colors();
 }
 
-body {
-  background-color: var(--main-bg-color);
-  color: var(--main-text-color);
-}
+// body {
+//   background-color: var(--main-bg-color);
+//   color: var(--main-text-color);
+// }
 
 body.dark {
   @include dark-theme-colors();

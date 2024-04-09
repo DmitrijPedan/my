@@ -1,5 +1,5 @@
-import React, { createContext, useEffect, useRef, useState } from "react";
-import FullScreenLoader from "src/components/FullScreenLoader";
+import React, { createContext, useRef, useState } from "react";
+import PreLoader from "src/components/PreLoader";
 import type { ThemeValue } from "src/lib/helpers/theme";
 import useTheme from "src/lib/hooks/useTheme";
 
@@ -17,17 +17,15 @@ function AppProvider({ children }: { children: React.ReactNode }) {
   const { currentTheme, systemTheme, selectTheme } = useTheme();
   const [loading, setLoading] = useState<AppContextType["loading"]>(true);
 
-  useEffect(() => {
-    setTimeout(() => {
-      if (loaderRef.current) {
-        loaderRef.current.classList.add("animate-fade-out-md");
-        loaderRef.current.classList.add("opacity-0");
-        loaderRef.current.addEventListener("animationend", () => setLoading(false));
-      } else {
-        setLoading(false);
-      }
-    }, 1000);
-  }, []);
+  const onLoadingComplete = () => {
+    if (loaderRef.current) {
+      loaderRef.current.classList.add("animate-fade-out-md");
+      loaderRef.current.classList.add("opacity-0");
+      loaderRef.current.addEventListener("animationend", () => setLoading(false));
+    } else {
+      setLoading(false);
+    }
+  };
 
   return (
     <AppContext.Provider
@@ -39,7 +37,7 @@ function AppProvider({ children }: { children: React.ReactNode }) {
       }}>
       {loading ? (
         <div ref={loaderRef} className="h-screen w-screen">
-          <FullScreenLoader />
+          <PreLoader delay={2000} onLoadingComplete={onLoadingComplete} />
         </div>
       ) : (
         children
