@@ -4,7 +4,7 @@ function AppContent() {
   return (
     <Page>
       <div className="flex py-10">
-        <div className="w-5/12">
+        <div className="sticky top-0 w-5/12 self-start">
           <div className="">
             <h1 className="text-xl sm:text-2xl md:text-3xl">Dmitriy Pedan</h1>
             <h2>Frontend Engineer</h2>
