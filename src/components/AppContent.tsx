@@ -16,25 +16,6 @@ const MY_EXPERIENCE: JobCardProps["job"][] = [
         <li>Developing and maintaining websites and web applications</li>
         <li>Collaborating with designers to create responsive and interactive web designs</li>
         <li>Optimizing web applications for maximum speed and scalability</li>
-        <li>Implementing security protocols to protect sensitive data</li>
-        <li>Writing clean, maintainable, and efficient code</li>
-        <li>Participating in code reviews and team meetings</li>
-      </ul>
-    ),
-    tags: ["HTML/CSS/SCSS", "JavaScript", "React", "Angular", "Node.js", "Adonis.js", "MySQL", "Atlassian"],
-  },
-  {
-    from: "2019",
-    to: "present",
-    company: "Codevery LLC",
-    companyHref: "https://codevery.com",
-    position: "Frontend Engineer",
-    responsibilities: (
-      <ul>
-        <li>Developing and maintaining websites and web applications</li>
-        <li>Collaborating with designers to create responsive and interactive web designs</li>
-        <li>Optimizing web applications for maximum speed and scalability</li>
-        <li>Implementing security protocols to protect sensitive data</li>
         <li>Writing clean, maintainable, and efficient code</li>
         <li>Participating in code reviews and team meetings</li>
       </ul>
@@ -46,7 +27,7 @@ function AppContent() {
   return (
     <Page>
       <div className="flex flex-wrap py-10">
-        <div className="w-full self-start lg:sticky lg:top-0 lg:w-5/12">
+        <div className="w-full self-start lg:sticky lg:top-8 lg:w-5/12">
           <div className="flex flex-col lg:min-h-[80vh]">
             <h1 className="mb-4 text-4xl md:text-5xl">Dmitriy Pedan</h1>
             <h2 className="mb-5 text-lg sm:text-xl md:text-2xl">Frontend Engineer</h2>
