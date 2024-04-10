@@ -1,4 +1,4 @@
-import { ArrowUpRightIcon } from "@heroicons/react/24/solid";
+import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/solid";
 import classNames from "classnames";
 import React, { useRef } from "react";
 import Link from "src/components/Link";
@@ -23,16 +23,16 @@ function JobCard({ job, className }: JobCardProps) {
   return (
     <div
       className={classNames(
-        "group/item relative cursor-default rounded-md border border-gray-200 p-2 shadow-lg hover:border-emerald-200 sm:p-3 dark:border-slate-800 dark:shadow-none dark:hover:border-slate-800 dark:sm:border-none",
+        "group/item relative cursor-default rounded-md border border-gray-100 p-2 shadow-lg hover:border-emerald-300 sm:p-3 dark:border-slate-800 dark:shadow-none dark:hover:border-slate-800 dark:sm:border-none",
         className
       )}
       onClick={() => {
         linkRef.current?.click();
       }}>
-      <div className="absolute left-0 top-0 z-0 h-full w-full rounded-md bg-emerald-100 opacity-0 transition-opacity group-hover/item:opacity-40 dark:bg-slate-800"></div>
+      <div className="absolute left-0 top-0 z-0 h-full w-full rounded-md bg-slate-100 opacity-0 transition-opacity group-hover/item:opacity-40 dark:bg-slate-800"></div>
       <div className="relative z-10 flex flex-col sm:flex-row">
         <div className="w-3/12">
-          <p className="mb-1 sm:mb-0 dark:text-white">
+          <p className="mt-1 uppercase sm:mb-0 dark:text-white">
             <span>{job.from}</span> - <span>{job.to}</span>
           </p>
         </div>
@@ -48,7 +48,7 @@ function JobCard({ job, className }: JobCardProps) {
                 className="text-xl font-bold text-black group-hover/item:text-emerald-400 dark:text-white">
                 {job.company}
               </Link>
-              <ArrowUpRightIcon className="ml-3 h-4 w-4 opacity-30 transition-opacity group-hover/item:opacity-100" />
+              <ArrowTopRightOnSquareIcon className="ml-3 h-5 w-5 opacity-30 transition-opacity group-hover/item:text-emerald-400 group-hover/item:opacity-100" />
             </h4>
             <p aria-label="Position in the company" className="text-lg text-black dark:text-white">
               {job.position}

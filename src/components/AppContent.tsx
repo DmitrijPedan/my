@@ -27,7 +27,7 @@ function AppContent() {
             <p className="mb-4">
               Hello, and welcome to my digital space! I’m a passionate and creative web developer dedicated to
               crafting seamless web experiences. With more than 5 years of hands-on experience in the tech
-              industry together with the talented team at
+              industry alongside the talented team at
               <Link
                 aria-label="Open Codevery.com in a new tab"
                 href="https://codevery.com/"
@@ -40,10 +40,8 @@ function AppContent() {
               websites and applications.
             </p>
             <p className="mb-4">
-              My journey began with a small attempt of customizing a WordPress theme, and it has taken me
-              through a fascinating path of constant learning and professional growth. Specializing in
-              front-end/back-end development, I&apos;ve honed my skills in JavaScript, always with an eye for
-              detail and a commitment to following best practices.
+              Specializing in front-end/back-end development, I&apos;ve honed my skills in JavaScript, always
+              with an eye for detail and a commitment to following best practices.
             </p>
             <p className="mb-4">
               In this portfolio, you&apos;ll find a
