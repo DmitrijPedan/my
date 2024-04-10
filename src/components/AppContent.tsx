@@ -1,59 +1,10 @@
 import Link from "src/components/Link";
 import SocialLinks from "src/components/SocialLinks";
 import JobCard from "src/components/cards/JobCard";
-import type { JobCardProps } from "src/components/cards/JobCard";
+import ProjectCard from "src/components/cards/ProjectCard";
+import { MY_EXPERIENCE } from "src/constants/experience";
+import { PROJECTS } from "src/constants/projects";
 import Page from "src/layout/Page";
-
-const MY_EXPERIENCE: JobCardProps["job"][] = [
-  {
-    from: "2019",
-    to: "present",
-    company: "Codevery LLC",
-    companyHref: "https://codevery.com",
-    position: "Frontend Engineer",
-    responsibilities: (
-      <ul>
-        <li>Developing and maintaining websites and web applications</li>
-        <li>Collaborating with designers to create responsive and interactive web designs</li>
-        <li>Optimizing web applications for maximum speed and scalability</li>
-        <li>Writing clean, maintainable, and efficient code</li>
-        <li>Participating in code reviews and team meetings</li>
-      </ul>
-    ),
-  },
-  {
-    from: "2019",
-    to: "present",
-    company: "Codevery LLC",
-    companyHref: "https://codevery.com",
-    position: "Frontend Engineer",
-    responsibilities: (
-      <ul>
-        <li>Developing and maintaining websites and web applications</li>
-        <li>Collaborating with designers to create responsive and interactive web designs</li>
-        <li>Optimizing web applications for maximum speed and scalability</li>
-        <li>Writing clean, maintainable, and efficient code</li>
-        <li>Participating in code reviews and team meetings</li>
-      </ul>
-    ),
-  },
-  {
-    from: "2019",
-    to: "present",
-    company: "Codevery LLC",
-    companyHref: "https://codevery.com",
-    position: "Frontend Engineer",
-    responsibilities: (
-      <ul>
-        <li>Developing and maintaining websites and web applications</li>
-        <li>Collaborating with designers to create responsive and interactive web designs</li>
-        <li>Optimizing web applications for maximum speed and scalability</li>
-        <li>Writing clean, maintainable, and efficient code</li>
-        <li>Participating in code reviews and team meetings</li>
-      </ul>
-    ),
-  },
-];
 
 function AppContent() {
   return (
@@ -116,6 +67,16 @@ function AppContent() {
               {MY_EXPERIENCE.map((job) => (
                 <li key={job.companyHref} className="mb-4">
                   <JobCard job={job} />
+                </li>
+              ))}
+            </ul>
+          </section>
+          <section id="myProjects" className="mt-10">
+            <h3 className="sr-only">My projects</h3>
+            <ul role="list">
+              {PROJECTS.map((project) => (
+                <li key={project.href} className="mb-4">
+                  <ProjectCard project={project} />
                 </li>
               ))}
             </ul>
