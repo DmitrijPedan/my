@@ -2,8 +2,8 @@ import { ArrowUpRightIcon } from "@heroicons/react/24/solid";
 import classNames from "classnames";
 import React, { useRef } from "react";
 import Link from "src/components/Link";
-import Skills from "src/components/Skills";
-import type { SkillsProps } from "src/components/Skills";
+import type { TagsProps } from "src/components/Tags";
+import Tags from "src/components/Tags";
 
 export type JobCardProps = React.HTMLAttributes<HTMLDivElement> & {
   job: {
@@ -13,7 +13,7 @@ export type JobCardProps = React.HTMLAttributes<HTMLDivElement> & {
     companyHref: string;
     position: string;
     responsibilities: string | React.ReactNode;
-    skills: SkillsProps["skills"];
+    tags?: TagsProps["tags"];
   };
 };
 
@@ -55,9 +55,11 @@ function JobCard({ job, className }: JobCardProps) {
             </p>
           </header>
           <div aria-label={`Responsibilities in ${job.company}`}>{job.responsibilities}</div>
-          <footer>
-            <Skills aria-label={`Tech stack in ${job.company}`} skills={job.skills} className="mt-2" />
-          </footer>
+          {job.tags && (
+            <footer>
+              <Tags aria-label={`Tech stack in ${job.company}`} tags={job.tags} className="mt-2" />
+            </footer>
+          )}
         </div>
       </div>
     </div>

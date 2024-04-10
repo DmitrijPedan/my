@@ -1,21 +1,21 @@
 import classNames from "classnames";
 import React from "react";
 
-export type SkillsProps = React.HTMLAttributes<HTMLUListElement> & {
-  skills: string[];
+export type TagsProps = React.HTMLAttributes<HTMLUListElement> & {
+  tags?: string[];
 };
 
-function Skills({ skills, className, ...rest }: SkillsProps) {
-  return (
+function Tags({ tags, className, ...rest }: TagsProps) {
+  return tags ? (
     <ul className={classNames("-mx-1 flex flex-wrap", className)} {...rest}>
-      {skills.map((skill) => (
+      {tags.map((tag) => (
         <li
-          key={skill}
+          key={tag}
           className="m-1 rounded-full bg-gray-100 px-3 py-1 text-sm text-emerald-600 shadow-md dark:bg-slate-800 dark:text-emerald-500 dark:shadow-none">
-          {skill}
+          {tag}
         </li>
       ))}
     </ul>
-  );
+  ) : null;
 }
-export default Skills;
+export default Tags;
