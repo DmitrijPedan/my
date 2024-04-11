@@ -15,8 +15,8 @@ export function NotFoundPage() {
       </p>
       <NavLink
         to="/"
-        className="group mt-8 flex items-center text-lg text-blue-500 transition-colors hover:text-emerald-500 dark:text-white">
-        <ArrowLongLeftIcon className="mr-2 inline-block h-5 w-5 transition-transform group-hover:-translate-x-1" />
+        className="group mt-8 flex items-center text-xl font-bold text-black transition-colors hover:text-emerald-500 dark:text-white">
+        <ArrowLongLeftIcon className="mr-2 inline-block h-7 w-7 transition-transform group-hover:-translate-x-1" />
         <span>Home</span>
       </NavLink>
     </Page>

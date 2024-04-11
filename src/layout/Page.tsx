@@ -13,7 +13,7 @@ export function Page({ children, className }: { children: React.ReactNode; class
         className={classNames("container relative z-10 mx-auto max-w-6xl flex-auto px-4 md:px-6", className)}>
         {children}
       </main>
-      <Footer />
+      <Footer className="relative z-10" />
     </div>
   );
 }
