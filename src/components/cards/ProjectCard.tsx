@@ -1,6 +1,7 @@
 import { ArrowTopRightOnSquareIcon, LinkIcon } from "@heroicons/react/24/solid";
 import classNames from "classnames";
 import React, { useRef } from "react";
+import { NavLink } from "react-router-dom";
 import Link from "src/components/Link";
 import Tags from "src/components/Tags";
 import type { Project } from "src/constants/projects";
@@ -33,16 +34,17 @@ function ProjectCard({ project, className }: ProjectCardProps) {
         <div className="w-9/12">
           <header>
             <h4
+              onClick={(e) => e.stopPropagation()}
               aria-label="Company name"
               className="flex items-center text-black transition-colors dark:text-white">
-              <Link
-                innerRef={descriptionLinkRef}
-                href={"/projects/" + project.slug}
+              <NavLink
+                to={"/projects/" + project.slug}
+                ref={descriptionLinkRef}
                 aria-label={`See more detailed info about ${project.name}`}
                 className="text-xl font-bold group-hover/item:text-emerald-400">
-                {project.name}
-              </Link>
-              <ArrowTopRightOnSquareIcon className="ml-3 h-5 w-5 opacity-30 group-hover/item:text-emerald-400 group-hover/item:opacity-100" />
+                <span>{project.name}</span>
+                <ArrowTopRightOnSquareIcon className="ml-3 h-5 w-5 opacity-30 group-hover/item:text-emerald-400 group-hover/item:opacity-100" />
+              </NavLink>
             </h4>
           </header>
           <div aria-label="Project description">{project.description}</div>

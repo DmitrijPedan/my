@@ -1,3 +1,5 @@
+import { ArrowUpRightIcon } from "@heroicons/react/24/solid";
+import { NavLink } from "react-router-dom";
 import Link from "src/components/Link";
 import SocialLinks from "src/components/SocialLinks";
 import JobCard from "src/components/cards/JobCard";
@@ -78,6 +80,13 @@ export function HomePage() {
                 </li>
               ))}
             </ul>
+            <NavLink
+              aria-label="Go to the Projects page"
+              to="/projects"
+              className="group mt-4 flex cursor-pointer items-center text-right text-emerald-500 transition-colors hover:text-emerald-400 dark:text-white dark:hover:text-emerald-500">
+              <span>View all projects</span>
+              <ArrowUpRightIcon className="ml-2 h-4 w-4 transition-transform group-hover:-translate-y-px group-hover:translate-x-px" />
+            </NavLink>
           </section>
         </div>
       </div>

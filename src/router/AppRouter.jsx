@@ -15,6 +15,10 @@ export const router = createBrowserRouter([
     element: <SingleProjectPage />,
   },
   {
+    path: "/not-found",
+    element: <NotFoundPage />,
+  },
+  {
     path: "*",
     element: <NotFoundPage />,
   },
