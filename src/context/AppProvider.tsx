@@ -37,7 +37,7 @@ function AppProvider({ children }: { children: React.ReactNode }) {
       }}>
       {loading ? (
         <div ref={loaderRef} className="h-screen w-screen">
-          <PreLoader delay={2000} onLoadingComplete={onLoadingComplete} />
+          <PreLoader delay={1000} onLoadingComplete={onLoadingComplete} />
         </div>
       ) : (
         children

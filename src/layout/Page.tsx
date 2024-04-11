@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "src/components/Header";
 
-function Page({ children }: { children: React.ReactNode }) {
+export function Page({ children }: { children: React.ReactNode }) {
   return (
     <div className="relative flex min-h-screen flex-col">
       <div className="fixed left-0 top-0 h-[200vh] w-[15vw] -translate-y-1/2 translate-x-1/3 rotate-45 bg-gradient-to-r opacity-60 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900" />
@@ -11,5 +11,3 @@ function Page({ children }: { children: React.ReactNode }) {
     </div>
   );
 }
-
-export default Page;

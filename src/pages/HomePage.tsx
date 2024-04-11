@@ -4,9 +4,9 @@ import JobCard from "src/components/cards/JobCard";
 import ProjectCard from "src/components/cards/ProjectCard";
 import { MY_EXPERIENCE } from "src/constants/experience";
 import { PROJECTS } from "src/constants/projects";
-import Page from "src/layout/Page";
+import { Page } from "src/layout";
 
-function AppContent() {
+export function HomePage() {
   return (
     <Page>
       <div className="flex flex-wrap py-10">
@@ -84,4 +84,3 @@ function AppContent() {
     </Page>
   );
 }
-export default AppContent;
