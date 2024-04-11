@@ -2,6 +2,7 @@ import classNames from "classnames";
 import React from "react";
 import Footer from "src/components/Footer";
 import Header from "src/components/Header";
+import { OnTopButton } from "src/components/buttons/OnTopButton";
 
 export function Page({ children, className }: { children: React.ReactNode; className?: string }) {
   return (
@@ -14,6 +15,7 @@ export function Page({ children, className }: { children: React.ReactNode; class
         {children}
       </main>
       <Footer className="relative z-10" />
+      <OnTopButton className="relative z-10" />
     </div>
   );
 }

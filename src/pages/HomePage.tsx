@@ -69,7 +69,7 @@ export function HomePage() {
               ))}
             </ul>
           </section>
-          <section id="myProjects" className="mt-10">
+          <section id="myProjects" className="mt-10 ">
             <h3 className="sr-only">My projects</h3>
             <ul role="list">
               {PROJECTS.map((project) => (
