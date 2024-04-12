@@ -38,17 +38,18 @@ function JobCard({ job, className }: JobCardProps) {
         </div>
         <div className="w-9/12">
           <header>
-            <h4 aria-label="Company name" className="flex items-center">
+            <h4
+              onClick={(e) => e.stopPropagation()}
+              aria-label="Company name"
+              className="text-black transition-colors dark:text-white">
               <Link
-                innerRef={linkRef}
                 href={job.companyHref}
+                innerRef={linkRef}
                 aria-label={`Visit ${job.company} website`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-xl font-bold text-black group-hover/item:text-emerald-400 dark:text-white">
-                {job.company}
+                className="flex items-center text-xl font-bold group-hover/item:text-emerald-400">
+                <span>{job.company}</span>
+                <ArrowTopRightOnSquareIcon className="mb-1 ml-3 h-5 w-5 shrink-0 opacity-30 group-hover/item:text-emerald-400 group-hover/item:opacity-100" />
               </Link>
-              <ArrowTopRightOnSquareIcon className="ml-3 h-5 w-5 opacity-30 transition-opacity group-hover/item:text-emerald-400 group-hover/item:opacity-100" />
             </h4>
             <p aria-label="Position in the company" className="text-lg text-black dark:text-white">
               {job.position}

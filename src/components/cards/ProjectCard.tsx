@@ -36,14 +36,14 @@ function ProjectCard({ project, className }: ProjectCardProps) {
             <h4
               onClick={(e) => e.stopPropagation()}
               aria-label="Company name"
-              className="flex items-center text-black transition-colors dark:text-white">
+              className="text-black transition-colors dark:text-white">
               <NavLink
                 to={"/projects/" + project.slug}
                 ref={descriptionLinkRef}
                 aria-label={`See more detailed info about ${project.name}`}
-                className="text-xl font-bold group-hover/item:text-emerald-400">
+                className="flex items-center text-xl font-bold group-hover/item:text-emerald-400">
                 <span>{project.name}</span>
-                <ArrowTopRightOnSquareIcon className="ml-3 h-5 w-5 opacity-30 group-hover/item:text-emerald-400 group-hover/item:opacity-100" />
+                <ArrowTopRightOnSquareIcon className="mb-1 ml-3 h-5 w-5 shrink-0 opacity-30 group-hover/item:text-emerald-400 group-hover/item:opacity-100" />
               </NavLink>
             </h4>
           </header>

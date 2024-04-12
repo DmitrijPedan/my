@@ -8,7 +8,7 @@ function Footer({ className, ...rest }: React.HTMLAttributes<HTMLDivElement>) {
       className={classNames("mx-auto flex w-full max-w-6xl flex-col items-center", className)}
       {...rest}>
       <hr className="border-top w-full  border-slate-300 dark:border-slate-700" />
-      <div className="flex w-full flex-col flex-wrap items-center justify-between p-3 text-slate-700 md:flex-row dark:text-slate-400">
+      <div className="flex w-full flex-col flex-wrap items-center justify-between py-3 text-slate-700 md:flex-row dark:text-slate-400">
         <p className="mb-2 mr-3 text-sm md:mb-0">© 2019 - {new Date().getFullYear()}.</p>
         <p className="text-center text-sm">
           Developed using{" "}
