@@ -74,19 +74,21 @@ export function HomePage() {
           <section id="myProjects" className="mt-10 ">
             <h3 className="sr-only">My projects</h3>
             <ul role="list">
-              {PROJECTS.map((project) => (
+              {PROJECTS.filter((project) => project.priority).map((project) => (
                 <li key={project.href} className="mb-4">
                   <ProjectCard project={project} />
                 </li>
               ))}
             </ul>
-            <NavLink
-              aria-label="Go to the Projects page"
-              to="/projects"
-              className="group mt-4 flex cursor-pointer items-center text-right text-emerald-500 transition-colors hover:text-emerald-400 dark:text-white dark:hover:text-emerald-500">
-              <span>View all projects</span>
-              <ArrowUpRightIcon className="ml-2 h-4 w-4 transition-transform group-hover:-translate-y-px group-hover:translate-x-px" />
-            </NavLink>
+            <div className="mt-4 flex">
+              <NavLink
+                aria-label="Go to the Projects page"
+                to="/projects"
+                className="group flex cursor-pointer items-center text-emerald-500 transition-colors hover:text-emerald-400 dark:text-white dark:hover:text-emerald-500">
+                <span>View all projects</span>
+                <ArrowUpRightIcon className="ml-2 h-4 w-4 transition-transform group-hover:-translate-y-px group-hover:translate-x-px" />
+              </NavLink>
+            </div>
           </section>
         </div>
       </div>

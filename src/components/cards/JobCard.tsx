@@ -41,7 +41,7 @@ function JobCard({ job, className }: JobCardProps) {
             <h4
               onClick={(e) => e.stopPropagation()}
               aria-label="Company name"
-              className="text-black transition-colors dark:text-white">
+              className="flex text-black transition-colors dark:text-white">
               <Link
                 href={job.companyHref}
                 innerRef={linkRef}

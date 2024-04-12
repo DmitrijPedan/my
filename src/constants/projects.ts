@@ -1,6 +1,7 @@
 export type Project = {
   slug: string;
   name: string;
+  priority: boolean;
   images: {
     preview: string;
     full: string;
@@ -21,6 +22,7 @@ export const PROJECTS: Project[] = [
   {
     slug: "st-website",
     name: "SimpleTherapy website",
+    priority: true,
     images: {
       preview: PROJECTS_IMAGES_PATH + "st_website_preview.jpg",
       full: PROJECTS_IMAGES_PATH + "st_website_full.jpg",
@@ -39,6 +41,7 @@ export const PROJECTS: Project[] = [
   {
     slug: "hch-cms",
     name: "HeartCore Hotels CMS",
+    priority: true,
     images: {
       preview: PROJECTS_IMAGES_PATH + "hch_website_preview.jpg",
       full: PROJECTS_IMAGES_PATH + "hch_website.jpg",
@@ -57,6 +60,7 @@ export const PROJECTS: Project[] = [
   {
     slug: "clear-view",
     name: "ClearView",
+    priority: true,
     images: {
       preview: PROJECTS_IMAGES_PATH + "clear_view_preview.jpg",
       full: PROJECTS_IMAGES_PATH + "clear_view_full.jpg",
@@ -73,6 +77,7 @@ export const PROJECTS: Project[] = [
   {
     slug: "first-bread",
     name: "First Bread company website (HD-group)",
+    priority: true,
     images: {
       preview: PROJECTS_IMAGES_PATH + "first_bread_preview.jpg",
       full: PROJECTS_IMAGES_PATH + "first_bread_full.jpg",
@@ -91,6 +96,7 @@ export const PROJECTS: Project[] = [
   {
     slug: "hlebodar",
     name: "Hlebodar company website (HD-group)",
+    priority: true,
     images: {
       preview: PROJECTS_IMAGES_PATH + "hlebodar_preview.jpg",
       full: PROJECTS_IMAGES_PATH + "hlebodar_full.jpg",
@@ -109,6 +115,7 @@ export const PROJECTS: Project[] = [
   {
     slug: "bread-foy-you",
     name: "Bread4U landing pages (HD-group)",
+    priority: true,
     images: {
       preview: PROJECTS_IMAGES_PATH + "bread4U_preview.jpg",
       full: PROJECTS_IMAGES_PATH + "bread4U_full.jpg",
