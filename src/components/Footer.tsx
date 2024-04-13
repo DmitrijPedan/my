@@ -5,7 +5,7 @@ import Link from "src/components/Link";
 function Footer({ className, ...rest }: React.HTMLAttributes<HTMLDivElement>) {
   return (
     <footer
-      className={classNames("mx-auto flex w-full max-w-6xl flex-col items-center", className)}
+      className={classNames("mx-auto flex w-full max-w-7xl flex-col items-center", className)}
       {...rest}>
       <hr className="border-top w-full  border-slate-300 dark:border-slate-700" />
       <div className="flex w-full flex-col flex-wrap items-center justify-between py-3 text-slate-700 md:flex-row dark:text-slate-400">

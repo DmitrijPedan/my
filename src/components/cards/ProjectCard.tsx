@@ -27,7 +27,7 @@ function ProjectCard({ project, className }: ProjectCardProps) {
       <div className="relative z-10 flex flex-col sm:flex-row">
         <div className="w-3/12">
           <div className="relative mr-4 mt-1.5 overflow-hidden rounded-sm border border-gray-200 group-hover/item:border-gray-300 dark:border-none">
-            <img className="relative z-0 max-w-full" src={project.images.preview} alt={project.name} />
+            <img className="relative z-0 max-w-full" src={project.preview} alt={project.name} />
           </div>
         </div>
         <div className="w-9/12">
@@ -35,35 +35,40 @@ function ProjectCard({ project, className }: ProjectCardProps) {
             <h4
               onClick={(e) => e.stopPropagation()}
               aria-label="Company name"
-              className="flex text-black transition-colors dark:text-white">
-              <NavLink
-                to={"/projects/" + project.slug}
-                ref={descriptionLinkRef}
-                aria-label={`See more detailed info about ${project.name}`}
-                className="flex items-center text-xl font-bold group-hover/item:text-emerald-400">
+              className="flex text-xl font-bold  text-black transition-colors group-hover/item:text-emerald-400 dark:text-white">
+              {project.slug ? (
+                <NavLink
+                  to={"/projects/" + project.slug}
+                  ref={descriptionLinkRef}
+                  aria-label={`See more detailed info about ${project.name}`}
+                  className="flex items-center ">
+                  <span>{project.name}</span>
+                  <LinkIcon className="mb-1 ml-3 h-5 w-5 shrink-0 opacity-30 group-hover/item:text-emerald-400 group-hover/item:opacity-100" />
+                </NavLink>
+              ) : (
                 <span>{project.name}</span>
-                <ArrowTopRightOnSquareIcon className="mb-1 ml-3 h-5 w-5 shrink-0 opacity-30 group-hover/item:text-emerald-400 group-hover/item:opacity-100" />
-              </NavLink>
+              )}
             </h4>
           </header>
           <p aria-label="Project description" className="">
-            {project.description}
+            {project.shortDescription}
           </p>
           <div className="my-1">
             <span className="mr-2 dark:text-slate-400">Role:</span>
             <span className="dark:text-white">{project.role}</span>
           </div>
-          {project.href && (
-            <div aria-label={`Link to the ${project.name}`} onClick={(e) => e.stopPropagation()}>
+          {project.link && !project.private && (
+            <div onClick={(e) => e.stopPropagation()}>
               <Link
                 innerRef={projectLinkRef}
-                href={project.href}
+                aria-label={`Link to the ${project.name}`}
+                href={project.link}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center transition-all group-hover/item:text-emerald-400 group-hover/item:opacity-100 dark:opacity-30">
-                <span>{project.hrefText}</span>
+                <span>Visit</span>
                 <span>
-                  <LinkIcon className="ml-2 h-4 w-4" />
+                  <ArrowTopRightOnSquareIcon className="ml-2 h-4 w-4" />
                 </span>
               </Link>
             </div>

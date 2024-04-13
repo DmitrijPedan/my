@@ -9,7 +9,7 @@ export type HeaderProps = {
 
 function Header({ backTo, backText }: HeaderProps) {
   return (
-    <header className="container sticky top-0 z-50 mx-auto flex items-start justify-between backdrop-blur-sm">
+    <header className="container sticky top-0 z-50 mx-auto flex items-start justify-between">
       {backTo && (
         <div className="flex h-10 items-end">
           <NavLink

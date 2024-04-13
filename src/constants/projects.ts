@@ -1,134 +1,123 @@
 export type Project = {
-  slug: string;
   name: string;
+  shortDescription: string;
+  preview: string;
+  slug?: string;
+  year: number;
+  private: boolean;
   priority: boolean;
-  images: {
-    preview: string;
-    full: string;
-    desktop: string;
-    tablet: string;
-    mobile: string;
-  };
-  description: string;
-  period: string;
+  developedFor: string;
   role: string;
-  href?: string;
-  hrefText?: string;
   tags: string[];
+  link?: string;
+  detailedInfo?: {
+    fullDescription: string;
+    fillImage: string;
+    devices?: {
+      desktop: string;
+      tablet: string;
+      mobile: string;
+    };
+    gallery?: string[];
+  };
 };
 const PROJECTS_IMAGES_PATH = "/assets/images/projects/";
 
 export const PROJECTS: Project[] = [
   {
+    slug: "st-video-app",
+    name: "SimpleTherapy video app",
+    shortDescription:
+      "An application for scheduled video meetings between users and their therapist. The application can be used directly from the link or embedded via iframe.",
+    preview: PROJECTS_IMAGES_PATH + "st_website_preview.jpg",
+    year: 2024,
+    private: true,
+    priority: true,
+    developedFor: "SimpleTherapy inc.",
+    role: "Full-stack",
+    tags: ["Typescript", "Next.js", "React", "Zoom SDK", "Tailwind"],
+  },
+  {
     slug: "st-website",
     name: "SimpleTherapy website",
-    priority: true,
-    images: {
-      preview: PROJECTS_IMAGES_PATH + "st_website_preview.jpg",
-      full: PROJECTS_IMAGES_PATH + "st_website_full.jpg",
-      desktop: PROJECTS_IMAGES_PATH + "st_website_desktop.jpg",
-      tablet: PROJECTS_IMAGES_PATH + "st_website_tablet.jpg",
-      mobile: PROJECTS_IMAGES_PATH + "st_website_mobile.jpg",
-    },
-    description:
+    shortDescription:
       "SimpleTherapy company website. The website is designed to be simple and easy to use. It is built with Wordpress and Bootstrap. The website is fully responsive and works on all devices.",
-    role: "Full-stack developer",
-    href: "https://simpletherapy.com",
-    hrefText: "Visit site",
-    period: "2022",
-    tags: ["Vanilla JS", "Wordpress", "Bootstrap", "SCSS"],
+    preview: PROJECTS_IMAGES_PATH + "st_website_preview.jpg",
+    year: 2022,
+    private: false,
+    priority: true,
+    developedFor: "SimpleTherapy inc.",
+    role: "Full-stack",
+    link: "https://simpletherapy.com",
+    tags: ["Vanilla JS", "Wordpress", "Bootstrap", "SCSS", "Webpack", "npm"],
   },
   {
     slug: "hch-cms",
     name: "HeartCore Hotels CMS",
-    priority: true,
-    images: {
-      preview: PROJECTS_IMAGES_PATH + "hch_website_preview.jpg",
-      full: PROJECTS_IMAGES_PATH + "hch_website.jpg",
-      desktop: PROJECTS_IMAGES_PATH + "hch_site_desktop.jpg",
-      tablet: PROJECTS_IMAGES_PATH + "hch_site_tablet.jpg",
-      mobile: PROJECTS_IMAGES_PATH + "hch_site_mobile.jpg",
-    },
-    description:
+    shortDescription:
       "Fully custom CMS for HeartCore Hotels. SEO optimized, lightweight, and fast. The client part is built on Adonis.js as classic web application and the admin part is built on Angular as a SPA. The both parts are fully responsive and works on all devices.",
-    role: "Full-stack developer",
-    href: "https://www.heartcorehotels.com",
-    hrefText: "Visit site",
-    period: "2022",
+    preview: PROJECTS_IMAGES_PATH + "hch_website_preview.jpg",
+    year: 2022,
+    private: false,
+    priority: true,
+    developedFor: "HeartCore Hotels",
+    role: "Full-stack",
+    link: "https://www.heartcorehotels.com",
     tags: ["Adonis.js", "Angular", "Typescript", "Bootstrap", "Angular Material IU"],
   },
   {
     slug: "clear-view",
     name: "ClearView",
-    priority: true,
-    images: {
-      preview: PROJECTS_IMAGES_PATH + "clear_view_preview.jpg",
-      full: PROJECTS_IMAGES_PATH + "clear_view_full.jpg",
-      desktop: PROJECTS_IMAGES_PATH + "clear_view_desktop.jpg",
-      tablet: PROJECTS_IMAGES_PATH + "clear_view_tablet.jpg",
-      mobile: PROJECTS_IMAGES_PATH + "clear_view_mobile.jpg",
-    },
-    description:
+    shortDescription:
       "ClearView is a private web application that collects and processes Google search results by saved keywords on a daily basis. The application is built on Adonis.js (backend API) and Angular (frontend part, SPA).",
-    period: "2022",
-    role: "Front-end developer",
+    preview: PROJECTS_IMAGES_PATH + "clear_view_preview.jpg",
+    year: 2022,
+    private: true,
+    priority: true,
+    developedFor: "Private project",
+    role: "Front-end",
     tags: ["Adonis.js", "Angular", "Typescript", "Angular Material IU"],
   },
   {
     slug: "first-bread",
-    name: "First Bread company website (HD-group)",
+    name: "First Bread website",
+    shortDescription:
+      "The site represents a company that produces and sells bread. Custom designed theme for Wordpress. SEO optimized and fast.",
+    preview: PROJECTS_IMAGES_PATH + "first_bread_preview.jpg",
+    year: 2019,
+    private: false,
     priority: true,
-    images: {
-      preview: PROJECTS_IMAGES_PATH + "first_bread_preview.jpg",
-      full: PROJECTS_IMAGES_PATH + "first_bread_full.jpg",
-      desktop: PROJECTS_IMAGES_PATH + "first_bread_desktop.jpg",
-      tablet: PROJECTS_IMAGES_PATH + "first_bread_tablet.jpg",
-      mobile: PROJECTS_IMAGES_PATH + "first_bread_mobile.jpg",
-    },
-    description:
-      "The site represents a company that produces and sells bread. Custom designed theme for Wordpress. SEO optimized and fast. The site is fully responsive and works on all devices.",
-    period: "2019",
-    role: "Full-stack developer",
-    href: "https://hlib.cv.ua",
-    hrefText: "Visit site",
+    role: "Full-stack",
+    developedFor: "HD-group",
+    link: "https://hlib.cv.ua",
     tags: ["Wordpress", "Bootstrap", "SCSS", "Webpack", "npm"],
   },
   {
     slug: "hlebodar",
-    name: "Hlebodar company website (HD-group)",
-    priority: true,
-    images: {
-      preview: PROJECTS_IMAGES_PATH + "hlebodar_preview.jpg",
-      full: PROJECTS_IMAGES_PATH + "hlebodar_full.jpg",
-      desktop: PROJECTS_IMAGES_PATH + "hlebodar_desktop.jpg",
-      tablet: PROJECTS_IMAGES_PATH + "hlebodar_tablet.jpg",
-      mobile: PROJECTS_IMAGES_PATH + "hlebodar_mobile.jpg",
-    },
-    description:
+    name: "Hlebodar website",
+    shortDescription:
       "Multi-language site of Hlebodar company. Custom designed theme for Wordpress. SEO optimized and fast. The site is fully responsive and works on all devices.",
-    period: "2019",
-    role: "Full-stack developer",
-    href: "https://hlibodar.com.ua/en",
-    hrefText: "Visit site",
+    preview: PROJECTS_IMAGES_PATH + "hlebodar_preview.jpg",
+    year: 2019,
+    private: false,
+    priority: true,
+    role: "Full-stack",
+    developedFor: "HD-group",
+    link: "https://hlibodar.com.ua/en",
     tags: ["Wordpress", "Bootstrap", "SCSS", "Webpack", "npm"],
   },
   {
     slug: "bread-foy-you",
-    name: "Bread4U landing pages (HD-group)",
-    priority: true,
-    images: {
-      preview: PROJECTS_IMAGES_PATH + "bread4U_preview.jpg",
-      full: PROJECTS_IMAGES_PATH + "bread4U_full.jpg",
-      desktop: PROJECTS_IMAGES_PATH + "bread4U_desktop.jpg",
-      tablet: PROJECTS_IMAGES_PATH + "bread4U_tablet.jpg",
-      mobile: PROJECTS_IMAGES_PATH + "bread4U_mobile.jpg",
-    },
-    description:
+    name: "Bread4U landing pages",
+    shortDescription:
       "Landing pages for Bread4U company. SEO optimized and fast. The page is fully responsive and works on all devices.",
-    period: "2019",
-    role: "Front-end developer",
-    href: "https://www.bread4u.com.ua",
-    hrefText: "Visit site",
-    tags: ["Vanilla JS", "Bootstrap", "SCSS", "Webpack", "npm"],
+    preview: PROJECTS_IMAGES_PATH + "bread4U_preview.jpg",
+    year: 2019,
+    private: false,
+    priority: true,
+    role: "Front-end",
+    developedFor: "HD-group",
+    link: "https://www.bread4u.com.ua",
+    tags: ["Wordpress", "Bootstrap", "SCSS", "Webpack", "npm"],
   },
 ];

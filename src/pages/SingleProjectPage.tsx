@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useParams } from "react-router";
-import { NavLink, useNavigate } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
+import GoBackButton from "src/components/buttons/GoBackButton";
 import { PROJECTS } from "src/constants/projects";
 import { Page } from "src/layout";
 
@@ -18,7 +19,7 @@ export function SingleProjectPage() {
   return (
     <Page>
       <h1>Single Project Page {project_slug}</h1>
-      <NavLink to="/">Back</NavLink>
+      <GoBackButton />
     </Page>
   );
 }

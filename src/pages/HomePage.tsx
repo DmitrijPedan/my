@@ -12,7 +12,7 @@ export function HomePage() {
   return (
     <Page>
       <div className="flex flex-wrap py-10">
-        <div className="w-full self-start lg:sticky lg:top-8 lg:w-5/12">
+        <div className="w-full self-start lg:sticky lg:top-8 lg:w-4/12">
           <div className="flex flex-col lg:min-h-[80vh]">
             <h1 className="mb-4 text-4xl md:text-5xl">Dmitriy Pedan</h1>
             <h2 className="mb-5 text-lg sm:text-xl md:text-2xl">Frontend Engineer</h2>
@@ -23,7 +23,7 @@ export function HomePage() {
             <SocialLinks className="mt-8 sm:mt-12 lg:mt-auto" />
           </div>
         </div>
-        <div className="mt-20 w-full pl-0 lg:mt-0 lg:w-7/12 lg:pl-12">
+        <div className="mt-20 w-full pl-0 lg:mt-0 lg:w-8/12 lg:pl-12">
           <section aria-label="Summary" className="leading-7 lg:pl-2 dark:text-slate-400">
             <h3 className="sr-only">About me</h3>
             <p className="mb-4">
@@ -75,7 +75,7 @@ export function HomePage() {
             <h3 className="sr-only">My projects</h3>
             <ul role="list">
               {PROJECTS.filter((project) => project.priority).map((project) => (
-                <li key={project.href} className="mb-4">
+                <li key={project.link} className="mb-4">
                   <ProjectCard project={project} />
                 </li>
               ))}
