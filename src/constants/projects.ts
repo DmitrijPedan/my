@@ -42,7 +42,7 @@ export const PROJECTS: Project[] = [
     name: "SimpleTherapy website",
     shortDescription:
       "SimpleTherapy company website. The website is designed to be simple and easy to use. It is built with Wordpress and Bootstrap. The website is fully responsive and works on all devices.",
-    preview: PROJECTS_IMAGES_PATH + "st_website_preview.jpg",
+    preview: PROJECTS_IMAGES_PATH + "/st-website/" + "preview.jpg",
     year: 2022,
     private: false,
     priority: true,
@@ -50,6 +50,11 @@ export const PROJECTS: Project[] = [
     role: "Full-stack",
     link: "https://simpletherapy.com",
     tags: ["Vanilla JS", "Wordpress", "Bootstrap", "SCSS", "Webpack", "npm"],
+    detailedInfo: {
+      fillImage: PROJECTS_IMAGES_PATH + "/st-website/" + "preview.jpg",
+      fullDescription:
+        "An application for scheduled video meetings between users and their therapist. The application can be used directly from the link or embedded via iframe.",
+    },
   },
   {
     slug: "hch-cms",

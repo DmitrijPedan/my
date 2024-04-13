@@ -32,7 +32,7 @@ function JobCard({ job, className }: JobCardProps) {
       <div className="absolute left-0 top-0 z-0 h-full w-full rounded-md bg-slate-100 opacity-0 transition-opacity group-hover/item:opacity-40 dark:bg-slate-800"></div>
       <div className="relative z-10 flex flex-col sm:flex-row">
         <div className="w-3/12">
-          <p className="mt-1 uppercase sm:mb-0 dark:text-white">
+          <p className="muted-text-color mt-1 font-bold uppercase sm:mb-0 dark:text-slate-400">
             <span>{job.from}</span> - <span>{job.to}</span>
           </p>
         </div>
@@ -55,7 +55,11 @@ function JobCard({ job, className }: JobCardProps) {
               {job.position}
             </p>
           </header>
-          <div aria-label={`Responsibilities in ${job.company}`}>{job.responsibilities}</div>
+          <div
+            className="muted-text-color dark:text-slate-400"
+            aria-label={`Responsibilities in ${job.company}`}>
+            {job.responsibilities}
+          </div>
           {job.tags && (
             <footer>
               <Tags aria-label={`Tech stack in ${job.company}`} tags={job.tags} className="mt-2" />

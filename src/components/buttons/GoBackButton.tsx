@@ -17,7 +17,7 @@ function GoBackButton({ className, children = "Back", ...rest }: React.HTMLAttri
         navigate(href as string);
       }}
       className={classNames(
-        "group mt-8 flex items-center text-xl font-bold text-black transition-colors hover:text-emerald-500 dark:text-white",
+        "group flex items-center text-xl font-bold text-black transition-colors hover:text-emerald-500 dark:text-white",
         className
       )}
       {...rest}>

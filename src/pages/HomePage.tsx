@@ -12,7 +12,7 @@ export function HomePage() {
   return (
     <Page>
       <div className="flex flex-wrap py-10">
-        <div className="w-full self-start lg:sticky lg:top-8 lg:w-4/12">
+        <div className="muted-text-color w-full self-start lg:sticky lg:top-8 lg:w-4/12">
           <div className="flex flex-col lg:min-h-[80vh]">
             <h1 className="mb-4 text-4xl md:text-5xl">Dmitriy Pedan</h1>
             <h2 className="mb-5 text-lg sm:text-xl md:text-2xl">Frontend Engineer</h2>
@@ -35,7 +35,7 @@ export function HomePage() {
                 href="https://codevery.com/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="ml-1">
+                className="main-text-color ml-1">
                 Codevery LLC
               </Link>
               , my expertise lies in transforming ideas into beautifully designed and functionally robust
@@ -47,7 +47,10 @@ export function HomePage() {
             </p>
             <p className="mb-4">
               In this portfolio, you&apos;ll find a
-              <Link aria-label="Go to the Projects section" href="#myProjects" className="ml-1">
+              <Link
+                aria-label="Go to the Projects section"
+                href="#myProjects"
+                className="main-text-color ml-1">
                 showcase of my work
               </Link>
               , which includes a range of projects from landing pages to interactive web apps. Each project

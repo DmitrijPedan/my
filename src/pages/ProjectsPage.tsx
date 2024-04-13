@@ -32,7 +32,7 @@ export function ProjectsPage() {
           </thead>
           <tbody>
             {projects.map((project) => (
-              <Row key={project.slug} className="group cursor-default transition-colors">
+              <Row key={project.slug} className="muted-text-color group cursor-default transition-colors">
                 <Cell>{project.year}</Cell>
                 <Cell>
                   {!project.slug ? (

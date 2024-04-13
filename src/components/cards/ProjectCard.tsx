@@ -50,7 +50,7 @@ function ProjectCard({ project, className }: ProjectCardProps) {
               )}
             </h4>
           </header>
-          <p aria-label="Project description" className="">
+          <p aria-label="Project description" className="muted-text-color dark:text-slate-400">
             {project.shortDescription}
           </p>
           <div className="my-1">
