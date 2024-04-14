@@ -2,7 +2,7 @@ import { ArrowUpRightIcon } from "@heroicons/react/24/solid";
 import { NavLink } from "react-router-dom";
 import Link from "src/components/Link";
 import SocialLinks from "src/components/SocialLinks";
-import JobCard from "src/components/cards/JobCard";
+import ExperienceCard from "src/components/cards/ExperienceCard";
 import ProjectCard from "src/components/cards/ProjectCard";
 import { MY_EXPERIENCE } from "src/constants/experience";
 import { PROJECTS } from "src/constants/projects";
@@ -67,9 +67,9 @@ export function HomePage() {
           <section id="myExperience" className="mt-10">
             <h3 className="sr-only">My job experience</h3>
             <ul role="list">
-              {MY_EXPERIENCE.map((job) => (
-                <li key={job.companyHref} className="mb-4">
-                  <JobCard job={job} />
+              {MY_EXPERIENCE.map((experience) => (
+                <li key={experience.link} className="mb-4">
+                  <ExperienceCard experience={experience} />
                 </li>
               ))}
             </ul>
@@ -77,8 +77,8 @@ export function HomePage() {
           <section id="myProjects" className="mt-10 ">
             <h3 className="sr-only">My projects</h3>
             <ul role="list">
-              {PROJECTS.filter((project) => project.priority).map((project) => (
-                <li key={project.link} className="mb-4">
+              {PROJECTS.filter((project, i) => project.priority).map((project) => (
+                <li key={project.slug} className="mb-4">
                   <ProjectCard project={project} />
                 </li>
               ))}

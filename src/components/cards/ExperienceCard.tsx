@@ -2,22 +2,14 @@ import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/solid";
 import classNames from "classnames";
 import React, { useRef } from "react";
 import Link from "src/components/Link";
-import type { TagsProps } from "src/components/Tags";
 import Tags from "src/components/Tags";
+import type { WorkExperience } from "src/constants/experience";
 
 export type JobCardProps = React.HTMLAttributes<HTMLDivElement> & {
-  job: {
-    from: string;
-    to: string;
-    company: string;
-    companyHref: string;
-    position: string;
-    responsibilities: string | React.ReactNode;
-    tags?: TagsProps["tags"];
-  };
+  experience: WorkExperience;
 };
 
-function JobCard({ job, className }: JobCardProps) {
+function ExperienceCard({ experience, className }: JobCardProps) {
   const linkRef = useRef<HTMLAnchorElement>(null);
 
   return (
@@ -33,7 +25,7 @@ function JobCard({ job, className }: JobCardProps) {
       <div className="relative z-10 flex flex-col sm:flex-row">
         <div className="w-3/12">
           <p className="muted-text-color mt-1 font-bold uppercase sm:mb-0 dark:text-slate-400">
-            <span>{job.from}</span> - <span>{job.to}</span>
+            <span>{experience.from}</span> - <span>{experience.to}</span>
           </p>
         </div>
         <div className="w-9/12">
@@ -43,26 +35,30 @@ function JobCard({ job, className }: JobCardProps) {
               aria-label="Company name"
               className="flex text-black transition-colors dark:text-white">
               <Link
-                href={job.companyHref}
+                href={experience.link}
                 innerRef={linkRef}
-                aria-label={`Visit ${job.company} website`}
+                aria-label={`Visit ${experience.company} website`}
                 className="flex items-center text-xl font-bold group-hover/item:text-emerald-400">
-                <span>{job.company}</span>
+                <span>{experience.company}</span>
                 <ArrowTopRightOnSquareIcon className="mb-1 ml-3 h-5 w-5 shrink-0 opacity-30 group-hover/item:text-emerald-400 group-hover/item:opacity-100" />
               </Link>
             </h4>
             <p aria-label="Position in the company" className="text-lg text-black dark:text-white">
-              {job.position}
+              {experience.position}
             </p>
           </header>
           <div
             className="muted-text-color dark:text-slate-400"
-            aria-label={`Responsibilities in ${job.company}`}>
-            {job.responsibilities}
+            aria-label={`Responsibilities in ${experience.company}`}>
+            {experience.responsibilities}
           </div>
-          {job.tags && (
+          {experience.tags && (
             <footer>
-              <Tags aria-label={`Tech stack in ${job.company}`} tags={job.tags} className="mt-2" />
+              <Tags
+                aria-label={`Tech stack in ${experience.company}`}
+                tags={experience.tags}
+                className="mt-2"
+              />
             </footer>
           )}
         </div>
@@ -71,4 +67,4 @@ function JobCard({ job, className }: JobCardProps) {
   );
 }
 
-export default JobCard;
+export default ExperienceCard;

@@ -112,6 +112,11 @@ module.exports = {
         spacing: "margin, padding",
       },
     },
+    aspectRatio: {
+      phone: "0.46 / 1",
+      tablet: "0.75 / 1",
+      desktop: "16 / 9",
+    },
   },
   plugins: [],
 };

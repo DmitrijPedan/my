@@ -1,5 +1,4 @@
 import React, { useEffect, useRef } from "react";
-import BorderAnimatedContainer from "src/components/BorderAnimatedContainer";
 
 type PreLoaderProps = React.HTMLAttributes<HTMLDivElement> & {
   delay: number;

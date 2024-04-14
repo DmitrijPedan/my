@@ -35,7 +35,7 @@ export const PROJECTS: Project[] = [
     priority: true,
     developedFor: "SimpleTherapy inc.",
     role: "Full-stack",
-    tags: ["Typescript", "Next.js", "React", "Zoom SDK", "Tailwind"],
+    tags: ["TypeScript", "Next.js", "React", "Zoom SDK", "Tailwind CSS"],
   },
   {
     slug: "st-website",
@@ -49,11 +49,16 @@ export const PROJECTS: Project[] = [
     developedFor: "SimpleTherapy inc.",
     role: "Full-stack",
     link: "https://simpletherapy.com",
-    tags: ["Vanilla JS", "Wordpress", "Bootstrap", "SCSS", "Webpack", "npm"],
+    tags: ["JavaScript", "Wordpress", "Bootstrap", "SCSS", "Webpack", "npm"],
     detailedInfo: {
       fillImage: PROJECTS_IMAGES_PATH + "/st-website/" + "preview.jpg",
       fullDescription:
-        "An application for scheduled video meetings between users and their therapist. The application can be used directly from the link or embedded via iframe.",
+        "SimpleTherapy company website. The website is designed to be simple and easy to use. It is built with Wordpress and Bootstrap. The website is fully responsive and works on all devices.",
+      devices: {
+        desktop: PROJECTS_IMAGES_PATH + "/st-website/" + "desktop.jpg",
+        tablet: PROJECTS_IMAGES_PATH + "/st-website/" + "tablet.jpg",
+        mobile: PROJECTS_IMAGES_PATH + "/st-website/" + "mobile.jpg",
+      },
     },
   },
   {

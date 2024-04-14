@@ -1,12 +1,10 @@
-import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/solid";
 import { useEffect } from "react";
 import { useState } from "react";
 import { useParams } from "react-router";
 import { useNavigate } from "react-router-dom";
-import Link from "src/components/Link";
 import ProjectSummary from "src/components/ProjectSummary";
-import Tags from "src/components/Tags";
 import GoBackButton from "src/components/buttons/GoBackButton";
+import DevicesMockupsSection from "src/components/device-mockups/DevicesMockupsSection";
 import { PROJECTS } from "src/constants/projects";
 import type { Project } from "src/constants/projects";
 import { Page } from "src/layout";
@@ -21,7 +19,6 @@ export function SingleProjectPage() {
     if (!targetProject) {
       navigate("/not-found");
     } else {
-      console.log(targetProject);
       setProject(targetProject);
     }
   }, [project_slug]);
@@ -29,11 +26,12 @@ export function SingleProjectPage() {
   return (
     <Page>
       {project && (
-        <div>
+        <div className="pb-20">
           <GoBackButton className="mb-10" />
           <h1 className="primary-color mb-6 text-4xl">{project.name}</h1>
           <ProjectSummary project={project} className="mb-10" />
-          <p>{project.detailedInfo?.fullDescription || project.shortDescription}</p>
+          <p className="mb-10">{project.detailedInfo?.fullDescription || project.shortDescription}</p>
+          <DevicesMockupsSection detailedInfo={project.detailedInfo} />
         </div>
       )}
     </Page>

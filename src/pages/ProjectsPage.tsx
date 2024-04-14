@@ -1,4 +1,4 @@
-import { ArrowTopRightOnSquareIcon, LinkIcon } from "@heroicons/react/24/solid";
+import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/solid";
 import classNames from "classnames";
 import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
