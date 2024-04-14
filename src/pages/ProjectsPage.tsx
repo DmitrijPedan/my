@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import Link from "src/components/Link";
 import Tags from "src/components/Tags";
-import GoBackButton from "src/components/buttons/GoBackButton";
+import { HomeButton } from "src/components/buttons";
 import { PROJECTS } from "src/constants/projects";
 import type { Project } from "src/constants/projects";
 import { Page } from "src/layout";
@@ -18,7 +18,7 @@ export function ProjectsPage() {
 
   return (
     <Page className="max-w-7xl">
-      <div className="flex flex-col py-12">
+      <div className="flex animate-fade-in-sm flex-col py-12">
         <table className="table-auto">
           <thead className="border-b border-slate-600  text-left font-bold text-black dark:text-white">
             <Row>
@@ -35,18 +35,14 @@ export function ProjectsPage() {
               <Row key={project.slug} className="muted-text-color group cursor-default transition-colors">
                 <Cell>{project.year}</Cell>
                 <Cell>
-                  {!project.slug ? (
+                  <NavLink
+                    aria-label={`View more detailed info about ${project.name}`}
+                    title={`View more detailed info about ${project.name}`}
+                    to={"/projects/" + project.slug}
+                    className="flex group-hover:text-emerald-400">
                     <span>{project.name}</span>
-                  ) : (
-                    <NavLink
-                      aria-label={`View more detailed info about ${project.name}`}
-                      title={`View more detailed info about ${project.name}`}
-                      to={"/projects/" + project.slug}
-                      className="flex group-hover:text-emerald-400">
-                      <span>{project.name}</span>
-                      <ArrowTopRightOnSquareIcon className="ml-2 h-5 w-5 shrink-0" />
-                    </NavLink>
-                  )}
+                    <ArrowTopRightOnSquareIcon className="ml-2 h-5 w-5 shrink-0" />
+                  </NavLink>
                 </Cell>
                 <Cell className="hidden md:table-cell">{project.role}</Cell>
                 <Cell className="hidden sm:table-cell">{project.developedFor}</Cell>
@@ -78,7 +74,7 @@ export function ProjectsPage() {
             ))}
           </tbody>
         </table>
-        <GoBackButton className="mt-8" />
+        <HomeButton className="mt-10" />
       </div>
     </Page>
   );

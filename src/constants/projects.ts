@@ -2,7 +2,7 @@ export type Project = {
   name: string;
   shortDescription: string;
   preview: string;
-  slug?: string;
+  slug: string;
   year: number;
   private: boolean;
   priority: boolean;
@@ -20,7 +20,7 @@ export type Project = {
     };
     gallery?: string[];
   };
-  relatedProject?: string[];
+  relatedProjects?: string[];
 };
 const PROJECTS_IMAGES_PATH = "/assets/images/projects/";
 
@@ -47,7 +47,7 @@ export const PROJECTS: Project[] = [
         mobile: PROJECTS_IMAGES_PATH + "/st-video/" + "mobile.webp",
       },
     },
-    relatedProject: ["st-website", "st-booking", "st-ref"],
+    relatedProjects: ["st-website", "st-booking", "st-ref"],
   },
   {
     slug: "st-ref",
@@ -71,7 +71,7 @@ export const PROJECTS: Project[] = [
         mobile: PROJECTS_IMAGES_PATH + "/st-ref/" + "mobile.webp",
       },
     },
-    relatedProject: ["st-website", "st-video-app", "st-booking"],
+    relatedProjects: ["st-website", "st-video", "st-booking"],
   },
   {
     slug: "st-website",
@@ -96,7 +96,7 @@ export const PROJECTS: Project[] = [
         mobile: PROJECTS_IMAGES_PATH + "/st-website/" + "mobile.webp",
       },
     },
-    relatedProject: ["st-booking", "st-video-app", "st-ref"],
+    relatedProjects: ["st-booking", "st-video", "st-ref"],
   },
   {
     slug: "st-booking",
@@ -120,7 +120,7 @@ export const PROJECTS: Project[] = [
         mobile: PROJECTS_IMAGES_PATH + "/st-booking/" + "mobile.webp",
       },
     },
-    relatedProject: ["st-website", "st-video-app", "st-ref"],
+    relatedProjects: ["st-website", "st-video", "st-ref"],
   },
   {
     slug: "hch-site",
@@ -145,7 +145,7 @@ export const PROJECTS: Project[] = [
         mobile: PROJECTS_IMAGES_PATH + "/hch-site/" + "mobile.webp",
       },
     },
-    relatedProject: ["hch-admin"],
+    relatedProjects: ["hch-admin"],
   },
   {
     slug: "hch-admin",
@@ -169,7 +169,7 @@ export const PROJECTS: Project[] = [
         mobile: PROJECTS_IMAGES_PATH + "/hch-admin/" + "mobile.webp",
       },
     },
-    relatedProject: ["hch-site"],
+    relatedProjects: ["hch-site"],
   },
   {
     slug: "clear-view",

@@ -1,4 +1,4 @@
-import GoBackButton from "src/components/buttons/GoBackButton";
+import { GoBackButton } from "src/components/buttons";
 import { Page } from "src/layout";
 
 export function NotFoundPage() {

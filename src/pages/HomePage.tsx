@@ -1,7 +1,6 @@
-import { ArrowUpRightIcon } from "@heroicons/react/24/solid";
-import { NavLink } from "react-router-dom";
 import Link from "src/components/Link";
 import SocialLinks from "src/components/SocialLinks";
+import { GoToProjects } from "src/components/buttons";
 import ExperienceCard from "src/components/cards/ExperienceCard";
 import ProjectCard from "src/components/cards/ProjectCard";
 import { MY_EXPERIENCE } from "src/constants/experience";
@@ -11,7 +10,7 @@ import { Page } from "src/layout";
 export function HomePage() {
   return (
     <Page>
-      <div className="flex flex-wrap py-10">
+      <div className="flex animate-fade-in-sm flex-wrap py-10">
         <div className="muted-text-color w-full self-start lg:sticky lg:top-8 lg:w-4/12">
           <div className="flex flex-col lg:min-h-[80vh]">
             <h1 className="mb-4 text-4xl md:text-5xl">Dmitriy Pedan</h1>
@@ -83,15 +82,7 @@ export function HomePage() {
                 </li>
               ))}
             </ul>
-            <div className="mt-4 flex">
-              <NavLink
-                aria-label="Go to the Projects page"
-                to="/projects"
-                className="group flex cursor-pointer items-center text-emerald-500 transition-colors hover:text-emerald-400 dark:text-white dark:hover:text-emerald-500">
-                <span>View all projects</span>
-                <ArrowUpRightIcon className="ml-2 h-4 w-4 transition-transform group-hover:-translate-y-px group-hover:translate-x-px" />
-              </NavLink>
-            </div>
+            <GoToProjects className="mt-10" />
           </section>
         </div>
       </div>
