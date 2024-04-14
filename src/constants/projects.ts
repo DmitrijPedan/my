@@ -103,7 +103,7 @@ export const PROJECTS: Project[] = [
     name: "SimpleTherapy booking system",
     shortDescription:
       "Booking system for SimpleTherapy. The system allows users to book a session with a therapist. The system is based on open source Cal.Com software. The system is customized for the needs of SimpleTherapy.",
-    preview: PROJECTS_IMAGES_PATH + "/st-booking/" + "full.webp",
+    preview: PROJECTS_IMAGES_PATH + "/st-booking/" + "preview.webp",
     year: 2022,
     private: false,
     priority: true,
@@ -111,7 +111,7 @@ export const PROJECTS: Project[] = [
     role: "Full-stack",
     tags: ["TypeScript", "Next.js", "React", "Postgres", "Cal.Com"],
     detailedInfo: {
-      fillImage: PROJECTS_IMAGES_PATH + "/st-booking/" + "preview.webp",
+      fillImage: PROJECTS_IMAGES_PATH + "/st-booking/" + "full.webp",
       fullDescription:
         "Booking system for SimpleTherapy. The system allows users to book a session with a therapist. The system is based on open source Cal.Com software. The system is customized for the needs of SimpleTherapy.",
       devices: {

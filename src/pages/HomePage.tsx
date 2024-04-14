@@ -13,7 +13,7 @@ export function HomePage() {
       <div className="flex animate-fade-in-sm flex-wrap py-10">
         <div className="muted-text-color w-full self-start lg:sticky lg:top-8 lg:w-4/12">
           <div className="flex flex-col lg:min-h-[80vh]">
-            <h1 className="mb-4 text-4xl md:text-5xl">Dmitriy Pedan</h1>
+            <h1 className="main-text-color mb-4 text-4xl font-bold md:text-5xl">Dmitriy Pedan</h1>
             <h2 className="mb-5 text-lg sm:text-xl md:text-2xl">Frontend Engineer</h2>
             <p className="">
               Creating seamless and vibrant web solutions, I&apos;m, ready to bring your digital vision to
@@ -23,7 +23,9 @@ export function HomePage() {
           </div>
         </div>
         <div className="mt-20 w-full pl-0 lg:mt-0 lg:w-8/12 lg:pl-12">
-          <section aria-label="Summary" className="leading-7 lg:pl-2 dark:text-slate-400">
+          <section
+            aria-label="Summary"
+            className="mb-10 leading-7 sm:mb-14 md:mb-20 lg:pl-2 dark:text-slate-400">
             <h3 className="sr-only">About me</h3>
             <p className="mb-4">
               Hello, and welcome to my digital space! I’m a passionate and creative web developer dedicated to
@@ -63,8 +65,8 @@ export function HomePage() {
               outstanding web experience together!
             </p>
           </section>
-          <section id="myExperience" className="mt-10">
-            <h3 className="sr-only">My job experience</h3>
+          <section id="myExperience" className="mb-10 sm:mb-14 md:mb-20">
+            <h3 className="main-text-color mb-2 text-xl sm:hidden lg:pl-2">Experience:</h3>
             <ul role="list">
               {MY_EXPERIENCE.map((experience) => (
                 <li key={experience.link} className="mb-4">
@@ -72,9 +74,10 @@ export function HomePage() {
                 </li>
               ))}
             </ul>
+            <hr className="hidden border-slate-600 sm:block" />
           </section>
-          <section id="myProjects" className="mt-10 ">
-            <h3 className="sr-only">My projects</h3>
+          <section id="myProjects" className="">
+            <h3 className="main-text-color mb-2 text-xl sm:hidden lg:pl-2">Portfolio:</h3>
             <ul role="list">
               {PROJECTS.filter((project, i) => project.priority).map((project) => (
                 <li key={project.slug} className="mb-4">

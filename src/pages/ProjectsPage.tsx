@@ -20,7 +20,7 @@ export function ProjectsPage() {
     <Page className="max-w-7xl">
       <div className="flex animate-fade-in-sm flex-col py-12">
         <table className="table-auto">
-          <thead className="border-b border-slate-600  text-left font-bold text-black dark:text-white">
+          <thead className="border-b border-slate-600 text-left font-bold text-black dark:text-white">
             <Row>
               <Cell>Period</Cell>
               <Cell>Name</Cell>

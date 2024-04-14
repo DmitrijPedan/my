@@ -39,6 +39,9 @@ function Row({
           aria-label={`View more detailed info about ${project.name}`}
           title={`View more detailed info about ${project.name}`}
           to={"/projects/" + project.slug}
+          onClick={(e) => {
+            window.scrollTo(0, 0);
+          }}
           className="transition-colors group-hover:text-emerald-400">
           <span>{project.name}</span>
         </NavLink>
