@@ -24,9 +24,9 @@ export function ProjectsPage() {
             <Row>
               <Cell>Period</Cell>
               <Cell>Name</Cell>
-              <Cell>Role</Cell>
-              <Cell>Developed for</Cell>
-              <Cell className="hidden sm:block">Tags</Cell>
+              <Cell className="hidden md:table-cell">Role</Cell>
+              <Cell className="hidden sm:table-cell">Developed for</Cell>
+              <Cell className="hidden md:table-cell">Tags</Cell>
               <Cell>Link</Cell>
             </Row>
           </thead>
@@ -48,9 +48,9 @@ export function ProjectsPage() {
                     </NavLink>
                   )}
                 </Cell>
-                <Cell>{project.role}</Cell>
-                <Cell>{project.developedFor}</Cell>
-                <Cell className="hidden !py-3 sm:block">
+                <Cell className="hidden md:table-cell">{project.role}</Cell>
+                <Cell className="hidden sm:table-cell">{project.developedFor}</Cell>
+                <Cell className="hidden max-w-96 !py-3 md:table-cell">
                   <Tags tags={project.tags} />
                 </Cell>
                 <Cell className="">
