@@ -36,7 +36,9 @@ export function SingleProjectPage() {
           <HomeButton className="mb-10" />
           <h1 className="primary-color mb-6 text-4xl">{project.name}</h1>
           <ProjectSummary project={project} className="mb-10" />
-          <p className="mb-10">{project.detailedInfo?.fullDescription || project.shortDescription}</p>
+          <div className="mb-10 [&>p]:mb-2 [&>ul]:mb-2 [&>ul]:list-disc [&>ul]:pl-4">
+            {project.detailedInfo?.fullDescription || project.shortDescription}
+          </div>
           <DevicesMockupsSection detailedInfo={project.detailedInfo} className="mb-10" />
           <RelatedProjects projects={relatedProjects} className="mb-10" />
           <GoToProjects className="mt-10" />
