@@ -11,10 +11,7 @@ export function HomeButton({
   return (
     <NavLink
       to="/"
-      className={classNames(
-        "group flex items-center text-xl font-bold text-black transition-colors hover:text-emerald-500 dark:text-white",
-        className
-      )}
+      className={classNames("link-color group flex items-center text-xl font-bold", className)}
       {...rest}>
       <ArrowLongLeftIcon className="mr-2 inline-block h-7 w-7 transition-transform group-hover:-translate-x-1" />
       <span>{children}</span>

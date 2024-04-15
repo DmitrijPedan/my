@@ -42,7 +42,7 @@ function Row({
           onClick={(e) => {
             window.scrollTo(0, 0);
           }}
-          className="transition-colors group-hover:text-emerald-400">
+          className="link-color">
           <span>{project.name}</span>
         </NavLink>
       </td>

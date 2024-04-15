@@ -28,7 +28,7 @@ function ThemeSelector({ className }: { className?: string }) {
     <div className={classNames("relative", className)} onClick={(e) => e.stopPropagation()}>
       <button
         onClick={() => setOpened((prev) => !prev)}
-        className={classNames("text-lg", currentTheme === "system" ? "text-gray-500" : "text-emerald-500")}>
+        className={classNames("text-lg", currentTheme === "system" ? "text-gray-500" : "primary-text-color")}>
         {currentTheme === "light" && ICONS.light}
         {currentTheme === "dark" && ICONS.dark}
         {currentTheme === "system" && (
@@ -50,7 +50,7 @@ function ThemeSelector({ className }: { className?: string }) {
               <button
                 className={classNames(
                   "w-full rounded-sm px-2 py-1 hover:bg-gray-300 dark:hover:bg-slate-800",
-                  currentTheme === theme.value && "text-emerald-500"
+                  currentTheme === theme.value && "primary-text-color"
                 )}
                 onClick={() => {
                   selectTheme(theme.value);

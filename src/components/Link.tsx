@@ -10,13 +10,7 @@ function Link({
   innerRef?: React.RefObject<HTMLAnchorElement>;
 }) {
   return (
-    <a
-      ref={innerRef}
-      className={classNames(
-        "cursor-pointer text-emerald-500 transition-colors hover:text-emerald-400 dark:text-white dark:hover:text-emerald-500",
-        className
-      )}
-      {...rest}>
+    <a ref={innerRef} className={classNames("link-color cursor-pointer", className)} {...rest}>
       {children}
     </a>
   );

@@ -20,7 +20,7 @@ export function ProjectsPage() {
     <Page className="max-w-7xl">
       <div className="flex animate-fade-in-sm flex-col py-12">
         <table className="table-auto">
-          <thead className="border-b border-slate-600 text-left font-bold text-black dark:text-white">
+          <thead className="muted-border-color border-b text-left font-bold text-black dark:text-white">
             <Row>
               <Cell>Period</Cell>
               <Cell>Name</Cell>
@@ -39,7 +39,7 @@ export function ProjectsPage() {
                     aria-label={`View more detailed info about ${project.name}`}
                     title={`View more detailed info about ${project.name}`}
                     to={"/projects/" + project.slug}
-                    className="flex group-hover:text-emerald-400">
+                    className="link-color flex">
                     <span>{project.name}</span>
                     <ArrowTopRightOnSquareIcon className="ml-2 h-5 w-5 shrink-0" />
                   </NavLink>
@@ -64,7 +64,7 @@ export function ProjectsPage() {
                       href={project.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex group-hover:text-emerald-400">
+                      className="link-color flex">
                       <span>Visit</span>
                       <ArrowTopRightOnSquareIcon className="ml-2 h-5 w-5 shrink-0" />
                     </Link>

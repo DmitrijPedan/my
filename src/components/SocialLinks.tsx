@@ -12,7 +12,9 @@ const LINKS = [
     title: "LinkedIn",
     label: "Open LinkedIn profile in a new tab",
     newTab: true,
-    icon: <LinkedInIcon className="h-8 w-8 fill-slate-500 hover:fill-sky-700 sm:h-6 sm:w-6" />,
+    icon: (
+      <LinkedInIcon className="h-8 w-8 fill-slate-700 hover:fill-sky-700 sm:h-6 sm:w-6 dark:fill-slate-500" />
+    ),
   },
   {
     href: "https://github.com/DmitrijPedan",
@@ -20,7 +22,7 @@ const LINKS = [
     label: "Open GitHub profile in a new tab",
     newTab: true,
     icon: (
-      <GithubIcon className="h-9 w-9 fill-slate-500 hover:fill-black sm:h-7 sm:w-7 dark:hover:fill-white" />
+      <GithubIcon className="h-9 w-9 fill-slate-700 hover:fill-black sm:h-7 sm:w-7 dark:fill-slate-500 dark:hover:fill-white" />
     ),
   },
   {
@@ -28,21 +30,27 @@ const LINKS = [
     title: "Gmail",
     label: "Send an email to dmitrijpedan84@gmail.com",
     newTab: false,
-    icon: <GmailIcon className="h-8 w-8 fill-slate-500 hover:fill-red-500 sm:h-6 sm:w-6" />,
+    icon: (
+      <GmailIcon className="h-8 w-8 fill-slate-700 hover:fill-red-500 sm:h-6 sm:w-6 dark:fill-slate-500" />
+    ),
   },
   {
     href: "https://wa.me/380962036188",
     title: "WhatsApp",
     label: "Send message with WhatsApp",
     newTab: true,
-    icon: <WhatsAppIcon className="h-8 w-8 fill-slate-500 hover:fill-green-500 sm:h-6 sm:w-6" />,
+    icon: (
+      <WhatsAppIcon className="h-8 w-8 fill-slate-700 hover:fill-green-500 sm:h-6 sm:w-6 dark:fill-slate-500" />
+    ),
   },
   {
     href: "https://t.me/DmitriyPedan",
     title: "Telegram",
     label: "Send message with Telegram",
     newTab: true,
-    icon: <TelegramIcon className="h-9 w-9 fill-slate-500 hover:fill-sky-500 sm:h-7 sm:w-7" />,
+    icon: (
+      <TelegramIcon className="h-9 w-9 fill-slate-700 hover:fill-sky-500 sm:h-7 sm:w-7 dark:fill-slate-500" />
+    ),
   },
 ];
 

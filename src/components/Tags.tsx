@@ -11,7 +11,7 @@ function Tags({ tags, className, ...rest }: TagsProps) {
       {tags.map((tag) => (
         <li
           key={tag}
-          className="m-1 rounded-full bg-gray-100 px-3 py-1 text-sm text-emerald-500 shadow-md dark:bg-slate-800 dark:text-emerald-400 dark:shadow-none">
+          className="primary-text-color m-1 rounded-full bg-gray-100 px-3 py-1 text-sm shadow-sm dark:bg-slate-800 dark:shadow-none">
           {tag}
         </li>
       ))}

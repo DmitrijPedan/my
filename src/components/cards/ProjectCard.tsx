@@ -17,16 +17,16 @@ function ProjectCard({ project, className }: ProjectCardProps) {
   return (
     <div
       className={classNames(
-        "group/item relative cursor-default rounded-md border border-gray-200 p-2 shadow-lg hover:border-emerald-200 sm:p-3 dark:border-slate-800 dark:shadow-none dark:hover:border-slate-800 dark:sm:border-none",
+        "group relative cursor-default rounded-md border border-gray-100 p-2 shadow-sm sm:p-3 dark:border-slate-800 dark:shadow-none dark:hover:border-slate-800 dark:sm:border-none",
         className
       )}
       onClick={() => {
         descriptionLinkRef.current?.click();
       }}>
-      <div className="absolute left-0 top-0 z-0 h-full w-full rounded-md bg-slate-100 opacity-0 transition-opacity group-hover/item:opacity-40 dark:bg-slate-800"></div>
+      <div className="absolute left-0 top-0 z-0 h-full w-full rounded-md bg-slate-100 opacity-0 transition-opacity group-hover:opacity-40 dark:bg-slate-800"></div>
       <div className="relative z-10 flex flex-col sm:flex-row">
         <div className="w-3/12">
-          <div className="relative mr-4 mt-1.5 overflow-hidden rounded-sm border border-gray-200 group-hover/item:border-gray-300 dark:border-none">
+          <div className="relative mr-4 mt-1.5 overflow-hidden rounded-sm border border-gray-200 group-hover:border-gray-300 dark:border-none">
             <img className="relative z-0 max-w-full" src={project.preview} alt={project.name} />
           </div>
         </div>
@@ -35,15 +35,15 @@ function ProjectCard({ project, className }: ProjectCardProps) {
             <h4
               onClick={(e) => e.stopPropagation()}
               aria-label="Company name"
-              className="flex text-xl font-bold  text-black transition-colors group-hover/item:text-emerald-400 dark:text-white">
+              className="flex text-xl font-bold">
               {project.slug ? (
                 <NavLink
                   to={"/projects/" + project.slug}
                   ref={descriptionLinkRef}
                   aria-label={`See more detailed info about ${project.name}`}
-                  className="flex items-center ">
+                  className="link-color dark:black flex items-center">
                   <span>{project.name}</span>
-                  <LinkIcon className="mb-1 ml-3 h-5 w-5 shrink-0 opacity-30 group-hover/item:text-emerald-400 group-hover/item:opacity-100" />
+                  <LinkIcon className="mb-1 ml-3 h-5 w-5 shrink-0" />
                 </NavLink>
               ) : (
                 <span>{project.name}</span>
@@ -65,7 +65,7 @@ function ProjectCard({ project, className }: ProjectCardProps) {
                 href={project.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center transition-all group-hover/item:text-emerald-400 group-hover/item:opacity-100 dark:opacity-30">
+                className="flex items-center group-hover:opacity-100 dark:opacity-30">
                 <span>Visit</span>
                 <span>
                   <ArrowTopRightOnSquareIcon className="ml-2 h-4 w-4" />

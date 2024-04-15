@@ -9,24 +9,6 @@ module.exports = {
       fontFamily: {
         nunito: ['"Nunito"', ...defaultTheme.fontFamily.sans],
       },
-      colors: {
-        brand: {
-          color: {
-            1: "var(--brand-color-1)",
-            2: "var(--brand-color-2)",
-            3: "var(--brand-color-3)",
-            4: "var(--brand-color-4)",
-          },
-          bg: {
-            main: "var(--main-bg-color)",
-            muted: "var(--muted-bg-color)",
-          },
-          text: {
-            main: "var(--main-text-color)",
-            muted: "var(--muted-text-color)",
-          },
-        },
-      },
       animation: {
         ["ping-once"]: "ping 1s ease-in-out 1",
         ["ping-short"]: "ping 1s ease-in-out 3",

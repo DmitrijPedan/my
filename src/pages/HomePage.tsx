@@ -36,7 +36,7 @@ export function HomePage() {
                 href="https://codevery.com/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="main-text-color ml-1">
+                className="ml-1">
                 Codevery LLC
               </Link>
               , my expertise lies in transforming ideas into beautifully designed and functionally robust
@@ -48,10 +48,7 @@ export function HomePage() {
             </p>
             <p className="mb-4">
               In this portfolio, you&apos;ll find a
-              <Link
-                aria-label="Go to the Projects section"
-                href="#myProjects"
-                className="main-text-color ml-1">
+              <Link aria-label="Go to the Projects section" href="#myProjects" className="ml-1">
                 showcase of my work
               </Link>
               , which includes a range of projects from landing pages to interactive web apps. Each project
@@ -66,21 +63,20 @@ export function HomePage() {
             </p>
           </section>
           <section id="myExperience" className="mb-10 sm:mb-14 md:mb-20">
-            <h3 className="main-text-color mb-2 text-xl sm:hidden lg:pl-2">Experience:</h3>
+            <h3 className="main-text-color mb-2 text-xl lg:pl-2">Experience:</h3>
             <ul role="list">
               {MY_EXPERIENCE.map((experience) => (
-                <li key={experience.link} className="mb-4">
+                <li key={experience.link} className="mb-4 md:mb-6">
                   <ExperienceCard experience={experience} />
                 </li>
               ))}
             </ul>
-            <hr className="hidden border-slate-600 sm:block" />
           </section>
           <section id="myProjects" className="">
-            <h3 className="main-text-color mb-2 text-xl sm:hidden lg:pl-2">Portfolio:</h3>
+            <h3 className="main-text-color mb-2 text-xl lg:pl-2">Portfolio:</h3>
             <ul role="list">
               {PROJECTS.filter((project, i) => project.priority).map((project) => (
-                <li key={project.slug} className="mb-4">
+                <li key={project.slug} className="mb-4 md:mb-6">
                   <ProjectCard project={project} />
                 </li>
               ))}
