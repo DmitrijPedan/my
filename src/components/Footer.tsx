@@ -5,12 +5,12 @@ import Link from "src/components/Link";
 function Footer({ className, ...rest }: React.HTMLAttributes<HTMLDivElement>) {
   return (
     <footer
-      className={classNames("mx-auto flex w-full max-w-7xl flex-col items-center", className)}
+      className={classNames("mx-auto flex w-full max-w-7xl flex-col items-center px-2", className)}
       {...rest}>
-      <hr className="border-top w-full  border-slate-300 dark:border-slate-700" />
-      <div className="flex w-full flex-col flex-wrap items-center justify-between py-3 text-slate-700 md:flex-row dark:text-slate-400">
-        <p className="mb-2 mr-3 text-sm md:mb-0">© 2019 - {new Date().getFullYear()}.</p>
-        <p className="text-center text-sm">
+      <hr className="border-top w-full border-slate-300 dark:border-slate-700" />
+      <div className="flex w-full flex-row items-center justify-between py-3 text-slate-700 dark:text-slate-400">
+        <p className="mb-2 mr-3 w-5/12 text-sm md:mb-0 md:w-1/3">© 2019 - {new Date().getFullYear()}.</p>
+        <p className="w-6/12 text-left text-sm md:w-2/3 md:text-right">
           Developed using{" "}
           <Link
             aria-label="Open Visual Studio Code site in a new tab"

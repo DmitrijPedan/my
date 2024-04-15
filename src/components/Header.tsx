@@ -1,28 +1,17 @@
-import { ArrowLongLeftIcon } from "@heroicons/react/24/solid";
-import { NavLink } from "react-router-dom";
+import BreadCrumbs from "src/components/BreadCrumbs";
 import ThemeSelector from "src/components/ThemeSelector";
 
-export type HeaderProps = {
-  backTo?: string;
-  backText?: string;
-};
-
-function Header({ backTo, backText }: HeaderProps) {
+function Header() {
   return (
-    <header className="container sticky top-0 z-50 mx-auto flex items-start justify-between">
-      {backTo && (
-        <div className="flex h-10 items-end">
-          <NavLink
-            to={backTo}
-            className="group flex items-center text-lg font-bold text-black transition-colors hover:text-emerald-500 dark:text-white">
-            <ArrowLongLeftIcon className="mr-2 inline-block h-6 w-6 transition-transform group-hover:-translate-x-1" />
-            <span>{backText || "Back"}</span>
-          </NavLink>
+    <header className="sticky top-0 z-50 border-b border-slate-300 px-4 py-1 backdrop-blur dark:border-slate-800">
+      <nav className="container mx-auto flex max-w-7xl items-start justify-between">
+        <div className="flex h-10 items-center">
+          <BreadCrumbs />
         </div>
-      )}
-      <div className="ml-auto rounded-b-lg border bg-gray-100 px-4 py-1 shadow-md dark:border-none dark:bg-slate-700 dark:shadow-none">
-        <ThemeSelector />
-      </div>
+        <div className="ml-auto">
+          <ThemeSelector />
+        </div>
+      </nav>
     </header>
   );
 }

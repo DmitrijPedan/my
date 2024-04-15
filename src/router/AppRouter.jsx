@@ -1,4 +1,5 @@
-import { createBrowserRouter } from "react-router-dom";
+import { HomeIcon } from "@heroicons/react/24/solid";
+import { NavLink, Outlet, createBrowserRouter } from "react-router-dom";
 import { HomePage, NotFoundPage, ProjectsPage, SingleProjectPage } from "src/pages";
 
 export const router = createBrowserRouter(
@@ -6,14 +7,33 @@ export const router = createBrowserRouter(
     {
       path: "",
       element: <HomePage />,
+      handle: {
+        breadCrumb: () => <HomeIcon />,
+      },
     },
     {
       path: "projects",
-      element: <ProjectsPage />,
-    },
-    {
-      path: "projects/:project_slug",
-      element: <SingleProjectPage />,
+      element: <Outlet />,
+      handle: {
+        breadCrumb: () => (
+          <NavLink className="link-color" to="/projects">
+            projects
+          </NavLink>
+        ),
+      },
+      children: [
+        {
+          index: true,
+          element: <ProjectsPage />,
+        },
+        {
+          path: ":project_slug",
+          element: <SingleProjectPage />,
+          handle: {
+            breadCrumb: (params) => params?.project_slug || "project",
+          },
+        },
+      ],
     },
     {
       path: "not-found",

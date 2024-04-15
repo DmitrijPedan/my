@@ -40,7 +40,7 @@ export function OnTopButton({ className, ...rest }: React.HTMLAttributes<HTMLBut
       data-twe-ripple-init
       data-twe-ripple-color="light"
       className={classNames(
-        "z-100 !fixed bottom-14 left-5 hidden cursor-pointer rounded-full p-3 text-white shadow-md transition duration-150 ease-in-out focus:ring-0 md:bottom-5 md:left-[initial] md:right-5",
+        "z-100 !fixed bottom-16 left-5 hidden cursor-pointer rounded-full p-3 text-white shadow-md transition duration-150 ease-in-out focus:ring-0 md:bottom-5 md:left-[initial] md:right-5",
         "bg-slate-700 hover:bg-emerald-500 focus:bg-emerald-500 active:bg-emerald-500",
         "dark:bg-slate-800 dark:text-emerald-500 dark:hover:bg-emerald-600 dark:hover:text-white dark:focus:bg-emerald-600 dark:focus:text-white dark:active:bg-emerald-600 dark:active:text-white",
         className

@@ -28,7 +28,10 @@ function ThemeSelector({ className }: { className?: string }) {
     <div className={classNames("relative", className)} onClick={(e) => e.stopPropagation()}>
       <button
         onClick={() => setOpened((prev) => !prev)}
-        className={classNames("text-lg", currentTheme === "system" ? "text-gray-500" : "primary-text-color")}>
+        className={classNames(
+          "p-2 text-lg",
+          currentTheme === "system" ? "text-gray-500" : "primary-text-color"
+        )}>
         {currentTheme === "light" && ICONS.light}
         {currentTheme === "dark" && ICONS.dark}
         {currentTheme === "system" && (

@@ -18,7 +18,7 @@ export function ProjectsPage() {
 
   return (
     <Page className="max-w-7xl">
-      <div className="flex animate-fade-in-sm flex-col py-12">
+      <div className="flex animate-fade-in-sm flex-col">
         <table className="table-auto">
           <thead className="muted-border-color border-b text-left font-bold text-black dark:text-white">
             <Row>

@@ -32,8 +32,7 @@ export function SingleProjectPage() {
   return (
     <Page>
       {project && (
-        <div className="animate-fade-in-sm pb-20">
-          <HomeButton className="mb-10" />
+        <div className="animate-fade-in-sm">
           <h1 className="primary-text-color mb-6 text-4xl">{project.name}</h1>
           <ProjectSummary project={project} className="mb-10" />
           <div className="mb-10 [&>p]:mb-2 [&>ul]:mb-2 [&>ul]:list-disc [&>ul]:pl-4">

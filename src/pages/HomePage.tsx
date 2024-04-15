@@ -10,9 +10,9 @@ import { Page } from "src/layout";
 export function HomePage() {
   return (
     <Page>
-      <div className="flex animate-fade-in-sm flex-wrap py-10">
-        <div className="muted-text-color w-full self-start lg:sticky lg:top-8 lg:w-4/12">
-          <div className="flex flex-col lg:min-h-[80vh]">
+      <div className="flex animate-fade-in-sm flex-wrap">
+        <div className="muted-text-color w-full self-start lg:sticky lg:top-20 lg:w-4/12">
+          <div className="flex flex-col lg:min-h-[75vh]">
             <h1 className="main-text-color mb-4 text-4xl font-bold md:text-5xl">Dmitriy Pedan</h1>
             <h2 className="mb-5 text-lg sm:text-xl md:text-2xl">Frontend Engineer</h2>
             <p className="">
@@ -81,7 +81,7 @@ export function HomePage() {
                 </li>
               ))}
             </ul>
-            <GoToProjects className="mt-10" />
+            <GoToProjects className="mb-2 mt-10" />
           </section>
         </div>
       </div>
