@@ -118,7 +118,7 @@ export const PROJECTS: Project[] = [
       "Booking system for SimpleTherapy. The system allows users to book a session with their therapist.",
     preview: PROJECTS_IMAGES_PATH + "/st-booking/" + "preview.webp",
     year: 2022,
-    private: false,
+    private: true,
     priority: true,
     developedFor: "SimpleTherapy inc.",
     role: "Full-stack",
