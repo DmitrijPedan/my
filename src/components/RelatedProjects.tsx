@@ -32,9 +32,9 @@ function Row({
   project: Project;
 }) {
   return (
-    <tr className={classNames("group ", className)} {...rest}>
-      <td className="muted-text-color py-1 pr-4 align-top">{project.year}:</td>
-      <td className="main-text-color py-1 align-top">
+    <tr className={classNames("group", className)} {...rest}>
+      <td className="muted-text-color py-1.5 pr-4 align-top">{project.year}:</td>
+      <td className="main-text-color py-1.5 align-top">
         <NavLink
           aria-label={`View more detailed info about ${project.name}`}
           title={`View more detailed info about ${project.name}`}

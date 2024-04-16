@@ -7,7 +7,7 @@
 }
 
 .link-color {
-  @apply text-emerald-500 transition-all hover:text-emerald-500 group-hover:text-emerald-500 dark:text-white;
+  @apply text-emerald-500 transition-all focus:text-emerald-500 active:text-emerald-500 sm:hover:text-emerald-500 sm:group-hover:text-emerald-500 dark:text-white;
 }
 
 .main-text-color {

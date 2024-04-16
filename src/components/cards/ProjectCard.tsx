@@ -41,9 +41,10 @@ function ProjectCard({ project, className }: ProjectCardProps) {
                   to={"/projects/" + project.slug}
                   ref={descriptionLinkRef}
                   aria-label={`See more detailed info about ${project.name}`}
-                  className="link-color dark:black flex items-center">
+                  title={`See more detailed info about ${project.name}`}
+                  className="link-color dark:black">
                   <span>{project.name}</span>
-                  <LinkIcon className="mb-1 ml-3 h-5 w-5 shrink-0" />
+                  <LinkIcon className="mb-1 ml-3 inline h-5 w-5 shrink-0" />
                 </NavLink>
               ) : (
                 <span>{project.name}</span>
@@ -61,14 +62,15 @@ function ProjectCard({ project, className }: ProjectCardProps) {
             <div onClick={(e) => e.stopPropagation()}>
               <Link
                 innerRef={projectLinkRef}
-                aria-label={`Link to the ${project.name}`}
+                aria-label={`Open ${project.name} resource in a new tab`}
+                title={`Open ${project.name} resource in a new tab`}
                 href={project.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center group-hover:opacity-100 dark:opacity-30">
+                className="sm:group-hover:opacity-100 sm:dark:opacity-30">
                 <span>Visit</span>
                 <span>
-                  <ArrowTopRightOnSquareIcon className="ml-2 h-4 w-4" />
+                  <ArrowTopRightOnSquareIcon className="mb-1 ml-2 inline h-4 w-4" />
                 </span>
               </Link>
             </div>

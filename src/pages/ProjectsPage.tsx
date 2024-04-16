@@ -40,8 +40,8 @@ export function ProjectsPage() {
                     title={`View more detailed info about ${project.name}`}
                     to={"/projects/" + project.slug}
                     className="link-color flex">
-                    <span>{project.name}</span>
-                    <ArrowTopRightOnSquareIcon className="ml-2 h-5 w-5 shrink-0" />
+                    <span className="line-clamp-1">{project.name}</span>
+                    <ArrowTopRightOnSquareIcon className="mb-1 ml-1 mt-1 h-4 w-4 shrink-0" />
                   </NavLink>
                 </Cell>
                 <Cell className="hidden md:table-cell">{project.role}</Cell>
@@ -64,9 +64,9 @@ export function ProjectsPage() {
                       href={project.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="link-color flex">
+                      className="link-color flex items-center">
                       <span>Visit</span>
-                      <ArrowTopRightOnSquareIcon className="ml-2 h-5 w-5 shrink-0" />
+                      <ArrowTopRightOnSquareIcon className="ml-2 inline h-4 w-4 shrink-0" />
                     </Link>
                   )}
                 </Cell>
@@ -90,7 +90,7 @@ function Row({ children, className, ...rest }: React.HTMLAttributes<HTMLTableRow
 
 function Cell({ children, className, ...rest }: React.HTMLAttributes<HTMLTableCellElement>) {
   return (
-    <td className={classNames("px-1 py-4 align-top", className)} {...rest}>
+    <td className={classNames("px-2 py-4 align-top", className)} {...rest}>
       <div className="">{children}</div>
     </td>
   );
