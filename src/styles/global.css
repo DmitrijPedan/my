@@ -26,6 +26,10 @@
   @apply border-slate-300 dark:border-slate-600;
 }
 
+.primary-bg-color {
+  @apply bg-emerald-500 dark:bg-emerald-500;
+}
+
 .main-bg-color {
   @apply bg-white dark:bg-slate-900;
 }
