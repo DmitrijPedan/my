@@ -1,4 +1,4 @@
-import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/solid";
+import { ArrowTopRightOnSquareIcon, ArrowUpRightIcon } from "@heroicons/react/24/solid";
 import classNames from "classnames";
 import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
@@ -41,7 +41,7 @@ export function ProjectsPage() {
                     to={"/projects/" + project.slug}
                     className="link-color flex">
                     <span className="line-clamp-1">{project.name}</span>
-                    <ArrowTopRightOnSquareIcon className="mb-1 ml-1 mt-1 h-4 w-4 shrink-0" />
+                    <ArrowUpRightIcon className="mb-1 ml-1 mt-1 h-4 w-4 shrink-0 transition-transform md:group-hover:-translate-y-px md:group-hover:translate-x-px" />
                   </NavLink>
                 </Cell>
                 <Cell className="hidden md:table-cell">{project.role}</Cell>

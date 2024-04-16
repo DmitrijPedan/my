@@ -1,4 +1,4 @@
-import { ArrowTopRightOnSquareIcon, LinkIcon } from "@heroicons/react/24/solid";
+import { ArrowTopRightOnSquareIcon, ArrowUpRightIcon } from "@heroicons/react/24/solid";
 import classNames from "classnames";
 import React, { useRef } from "react";
 import { NavLink } from "react-router-dom";
@@ -44,7 +44,7 @@ function ProjectCard({ project, className }: ProjectCardProps) {
                   title={`See more detailed info about ${project.name}`}
                   className="link-color dark:black">
                   <span>{project.name}</span>
-                  <LinkIcon className="mb-1 ml-3 inline h-5 w-5 shrink-0" />
+                  <ArrowUpRightIcon className="mb-1 ml-1 inline h-4 w-4 shrink-0 transition-transform md:group-hover:-translate-y-px md:group-hover:translate-x-px" />
                 </NavLink>
               ) : (
                 <span>{project.name}</span>
