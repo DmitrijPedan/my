@@ -29,7 +29,7 @@ function ThemeSelector({ className }: { className?: string }) {
       <button
         onClick={() => setOpened((prev) => !prev)}
         className={classNames(
-          "p-2 text-lg",
+          "rounded-md bg-gray-100 p-2 text-lg dark:bg-slate-700",
           currentTheme === "system" ? "text-gray-500" : "primary-text-color"
         )}>
         {currentTheme === "light" && ICONS.light}
