@@ -23,12 +23,12 @@ function ExperienceCard({ experience, className }: JobCardProps) {
       }}>
       <div className="absolute left-0 top-0 z-0 h-full w-full rounded-md bg-slate-100 opacity-0 transition-opacity group-hover:opacity-40 dark:bg-slate-800"></div>
       <div className="relative z-10 flex flex-col sm:flex-row">
-        <div className="w-3/12">
+        <div className="mb-2 w-full sm:w-3/12">
           <p className="muted-text-color mt-1 font-semibold uppercase sm:mb-0 dark:text-slate-400">
             <span>{experience.from}</span> - <span>{experience.to}</span>
           </p>
         </div>
-        <div className="w-9/12">
+        <div className="w-full sm:w-9/12">
           <header>
             <h4 onClick={(e) => e.stopPropagation()} aria-label="Company name" className="flex">
               <Link
