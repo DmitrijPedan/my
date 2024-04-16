@@ -1,10 +1,13 @@
 import classNames from "classnames";
 import React from "react";
-import GithubIcon from "src/components/icons/GithubIcon";
-import GmailIcon from "src/components/icons/GmailIcon";
-import LinkedInIcon from "src/components/icons/LinkedInIcon";
-import TelegramIcon from "src/components/icons/TelegramIcon";
-import WhatsAppIcon from "src/components/icons/WhatsAppIcon";
+import {
+  CVIcon,
+  GithubIcon,
+  GmailIcon,
+  LinkedInIcon,
+  TelegramIcon,
+  WhatsAppIcon,
+} from "src/components/icons";
 
 const LINKS = [
   {
@@ -51,6 +54,13 @@ const LINKS = [
     icon: (
       <TelegramIcon className="h-9 w-9 fill-slate-700 hover:fill-sky-500 sm:h-7 sm:w-7 dark:fill-slate-500" />
     ),
+  },
+  {
+    href: "https://drive.google.com/file/d/1Xr8dKEkmgPD-J8r_JNTPGoSn_e6-zqTv/view?usp=drive_link",
+    title: "CV",
+    label: "Open my CV in a new tab",
+    newTab: true,
+    icon: <CVIcon className="h-8 w-8 fill-slate-700 hover:fill-white sm:h-7 sm:w-7 dark:fill-slate-500" />,
   },
 ];
 

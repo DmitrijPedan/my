@@ -1,6 +1,6 @@
 import React from "react";
 
-function GithubIcon(props: React.SVGProps<SVGSVGElement>) {
+export function GithubIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" {...props}>
       <title>github</title>
@@ -9,5 +9,3 @@ function GithubIcon(props: React.SVGProps<SVGSVGElement>) {
     </svg>
   );
 }
-
-export default GithubIcon;

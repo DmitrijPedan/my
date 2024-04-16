@@ -29,10 +29,18 @@ export function HomePage() {
             <h3 className="sr-only">About me</h3>
             <p className="mb-4">
               Hello, and welcome to my digital space! I’m a passionate and creative web developer dedicated to
-              crafting seamless web experiences. With more than 5 years of hands-on experience in the tech
-              industry alongside the talented team at
+              crafting seamless web experiences. With more than 5 years of hands-on
+              <Link
+                aria-label="Go to the Experience section"
+                title="Go to the Experience section"
+                href="#myExperience"
+                className="mx-1">
+                experience
+              </Link>
+              in the tech industry alongside the talented team at
               <Link
                 aria-label="Open Codevery.com in a new tab"
+                title="Open Codevery.com in a new tab"
                 href="https://codevery.com/"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -43,12 +51,16 @@ export function HomePage() {
               websites and applications.
             </p>
             <p className="mb-4">
-              Specializing in front-end/back-end development, I&apos;ve honed my skills in JavaScript, always
-              with an eye for detail and a commitment to following best practices.
+              Specializing in front-end/back-end development, I've honed my skills in JavaScript, always with
+              an eye for detail and a commitment to following best practices.
             </p>
             <p className="mb-4">
               In this portfolio, you&apos;ll find a
-              <Link aria-label="Go to the Projects section" href="#myProjects" className="ml-1">
+              <Link
+                aria-label="Go to the Projects section"
+                title="Go to the Projects section"
+                href="#myProjects"
+                className="ml-1">
                 showcase of my work
               </Link>
               , which includes a range of projects from landing pages to interactive web apps. Each project
@@ -62,8 +74,8 @@ export function HomePage() {
               outstanding web experience together!
             </p>
           </section>
-          <section id="myExperience" className="mb-10 sm:mb-14 md:mb-20">
-            <h3 className="main-text-color mb-2 text-xl lg:pl-2">Experience:</h3>
+          <section id="myExperience" className="mb-10 scroll-mt-20 sm:mb-14 md:mb-20">
+            <h3 className="main-text-color mb-4 text-2xl font-bold lg:pl-3">Experience</h3>
             <ul role="list">
               {MY_EXPERIENCE.map((experience) => (
                 <li key={experience.link} className="mb-4 md:mb-6">
@@ -72,8 +84,8 @@ export function HomePage() {
               ))}
             </ul>
           </section>
-          <section id="myProjects" className="">
-            <h3 className="main-text-color mb-2 text-xl lg:pl-2">Portfolio:</h3>
+          <section id="myProjects" className="scroll-mt-20">
+            <h3 className="main-text-color mb-4 text-2xl font-bold lg:pl-3">Portfolio</h3>
             <ul role="list">
               {PROJECTS.filter((project, i) => project.priority).map((project) => (
                 <li key={project.slug} className="mb-4 md:mb-6">
