@@ -68,11 +68,6 @@ export function HomePage() {
               development, and ultimately, delivering a digital experience that meets and exceeds
               expectations.
             </p>
-            <p className="mb-4">
-              I’m excited to continue my journey, and I’m looking for freelance opportunities, full-time
-              positions or collaborative projects. Let’s connect to explore how we can create the next
-              outstanding web experience together!
-            </p>
           </section>
           <section id="myExperience" className="mb-10 scroll-mt-20 sm:mb-14 md:mb-20">
             <h3 className="main-text-color mb-4 text-2xl font-bold lg:pl-3">Experience</h3>
