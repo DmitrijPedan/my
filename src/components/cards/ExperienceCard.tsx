@@ -1,7 +1,7 @@
 import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/solid";
-import React, { useRef } from "react";
+import classNames from "classnames";
+import React, { useRef, useState } from "react";
 import Link from "src/components/Link";
-import Tags from "src/components/Tags";
 import Card from "src/components/cards/Card";
 import type { WorkExperience } from "src/constants/experience";
 
@@ -11,6 +11,7 @@ export type JobCardProps = React.HTMLAttributes<HTMLDivElement> & {
 
 function ExperienceCard({ experience, className }: JobCardProps) {
   const linkRef = useRef<HTMLAnchorElement>(null);
+  const [collapsed, setCollapsed] = useState<boolean>(true);
 
   return (
     <Card className={className}>
@@ -39,19 +40,18 @@ function ExperienceCard({ experience, className }: JobCardProps) {
             </p>
           </header>
           <div
-            className="muted-text-color dark:text-slate-400"
+            className={classNames("muted-text-color dark:text-slate-400", collapsed && "line-clamp-6")}
             aria-label={`Responsibilities in ${experience.company}`}>
             {experience.responsibilities}
           </div>
-          {experience.tags && (
-            <footer>
-              <Tags
-                aria-label={`Tech stack in ${experience.company}`}
-                tags={experience.tags}
-                className="mt-2"
-              />
-            </footer>
-          )}
+          <div className="pr-4 text-right">
+            <button
+              aria-label="Show more or less responsibilities"
+              className="link-color cursor-pointer underline"
+              onClick={() => setCollapsed((prev) => !prev)}>
+              {collapsed ? "More" : "Less"}
+            </button>
+          </div>
         </div>
       </div>
     </Card>

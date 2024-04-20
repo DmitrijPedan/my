@@ -18,12 +18,25 @@ export const MY_EXPERIENCE: WorkExperience[] = [
     link: "https://codevery.com",
     position: "Frontend Engineer",
     responsibilities: (
-      <ul>
-        <li>Developing and maintaining websites and web applications</li>
-        <li>Collaborating with designers to create responsive and interactive web designs</li>
-        <li>Optimizing web applications for maximum speed and scalability</li>
-        <li>Writing clean, maintainable, and efficient code</li>
-        <li>Participating in code reviews and team meetings</li>
+      <ul className="ml-4 list-disc">
+        <li>
+          Providing well designed, optimized and efficient code using best software development practices;
+        </li>
+        <li>Implementing design templates into ready-made solutions, using best HTML/CSS practices;</li>
+        <li>Ensuring continuous integration and continuous delivery of products using CI/CD tools;</li>
+        <li>Creation and maintenance of software documentation;</li>
+        <li>
+          Communication with various project stakeholders across marketing, content, design and development to
+          understand and execute programming requirements under reasonable timeframes.
+        </li>
+        <li>
+          Resolving complex technical issues, collaborating with team members to identify root causes and
+          implementing effective solutions;
+        </li>
+        <li>
+          Support and mentoring for junior developers, conducting regular code reviews and providing
+          constructive feedback to team members;
+        </li>
       </ul>
     ),
   },
