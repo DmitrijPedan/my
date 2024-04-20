@@ -21,7 +21,7 @@ export function GoBackButton({
         navigate(href as string);
       }}
       className={classNames(
-        "group flex items-center text-xl font-bold text-black transition-colors hover:text-emerald-500 dark:text-white",
+        "group flex items-center text-xl font-bold text-black transition-colors hover:text-sky-500 dark:text-white",
         className
       )}
       {...rest}>

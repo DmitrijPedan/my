@@ -32,7 +32,7 @@ function ProjectSummary({ project, className }: { project: Project | null; class
               href={project.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex group-hover:text-emerald-400">
+              className="flex group-hover:text-sky-400">
               <span>Visit</span>
               <ArrowTopRightOnSquareIcon className="ml-2 h-5 w-5 shrink-0" />
             </Link>

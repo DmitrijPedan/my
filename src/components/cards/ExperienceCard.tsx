@@ -1,8 +1,8 @@
 import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/solid";
-import classNames from "classnames";
 import React, { useRef } from "react";
 import Link from "src/components/Link";
 import Tags from "src/components/Tags";
+import Card from "src/components/cards/Card";
 import type { WorkExperience } from "src/constants/experience";
 
 export type JobCardProps = React.HTMLAttributes<HTMLDivElement> & {
@@ -13,15 +13,7 @@ function ExperienceCard({ experience, className }: JobCardProps) {
   const linkRef = useRef<HTMLAnchorElement>(null);
 
   return (
-    <div
-      className={classNames(
-        "group relative cursor-default rounded-md border border-gray-100 p-2 shadow-sm sm:p-3 dark:border-slate-800 dark:shadow-none dark:hover:border-slate-800 dark:sm:border-none",
-        className
-      )}
-      onClick={() => {
-        linkRef.current?.click();
-      }}>
-      <div className="absolute left-0 top-0 z-0 h-full w-full rounded-md bg-slate-100 opacity-0 transition-opacity group-hover:opacity-40 dark:bg-slate-800"></div>
+    <Card className={className}>
       <div className="relative z-10 flex flex-col sm:flex-row">
         <div className="mb-2 w-full sm:w-3/12">
           <p className="muted-text-color mt-1 font-semibold uppercase sm:mb-0 dark:text-slate-400">
@@ -62,7 +54,7 @@ function ExperienceCard({ experience, className }: JobCardProps) {
           )}
         </div>
       </div>
-    </div>
+    </Card>
   );
 }
 

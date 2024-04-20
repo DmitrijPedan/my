@@ -1,9 +1,9 @@
 import { ArrowTopRightOnSquareIcon, ArrowUpRightIcon } from "@heroicons/react/24/solid";
-import classNames from "classnames";
 import React, { useRef } from "react";
 import { NavLink } from "react-router-dom";
 import Link from "src/components/Link";
 import Tags from "src/components/Tags";
+import Card from "src/components/cards/Card";
 import type { Project } from "src/constants/projects";
 
 export type ProjectCardProps = React.HTMLAttributes<HTMLDivElement> & {
@@ -15,18 +15,10 @@ function ProjectCard({ project, className }: ProjectCardProps) {
   const projectLinkRef = useRef<HTMLAnchorElement>(null);
 
   return (
-    <div
-      className={classNames(
-        "group relative cursor-default rounded-md border border-gray-100 p-2 shadow-sm sm:p-3 dark:border-slate-800 dark:shadow-none dark:hover:border-slate-800 dark:sm:border-none",
-        className
-      )}
-      onClick={() => {
-        descriptionLinkRef.current?.click();
-      }}>
-      <div className="absolute left-0 top-0 z-0 h-full w-full rounded-md bg-slate-100 opacity-0 transition-opacity group-hover:opacity-40 dark:bg-slate-800"></div>
+    <Card className={className}>
       <div className="relative z-10 flex flex-col sm:flex-row">
         <div className="hidden w-3/12 sm:block">
-          <div className="relative mr-4 mt-1.5 overflow-hidden rounded-sm border border-gray-200 group-hover:border-gray-300 dark:border-none">
+          <div className="relative mr-4 mt-1.5 overflow-hidden rounded-md group-hover:border-gray-300 dark:border-none">
             <img className="relative z-0 max-w-full" src={project.preview} alt={project.name} />
           </div>
         </div>
@@ -84,7 +76,7 @@ function ProjectCard({ project, className }: ProjectCardProps) {
           </footer>
         </div>
       </div>
-    </div>
+    </Card>
   );
 }
 

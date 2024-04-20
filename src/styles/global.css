@@ -3,11 +3,11 @@
 @tailwind utilities;
 
 .primary-text-color {
-  @apply text-emerald-500 dark:text-emerald-500;
+  @apply text-sky-500 dark:text-sky-500;
 }
 
 .link-color {
-  @apply text-emerald-500 transition-all focus:text-emerald-500 active:text-emerald-500 sm:hover:text-emerald-500 sm:group-hover:text-emerald-500 dark:text-white;
+  @apply text-sky-500 transition-all focus:text-sky-500 active:text-sky-500 sm:hover:text-sky-500 sm:group-hover:text-sky-500 dark:text-white;
 }
 
 .main-text-color {
@@ -27,7 +27,7 @@
 }
 
 .primary-bg-color {
-  @apply bg-emerald-500 dark:bg-emerald-500;
+  @apply bg-sky-500 dark:bg-sky-500;
 }
 
 .main-bg-color {
@@ -46,5 +46,5 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-thumb {
-  @apply rounded-full border-4 border-transparent bg-emerald-500 dark:bg-emerald-600;
+  @apply rounded-full border-4 border-transparent bg-sky-500 dark:bg-sky-600;
 }
