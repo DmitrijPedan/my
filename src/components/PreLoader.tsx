@@ -7,22 +7,21 @@ type PreLoaderProps = React.HTMLAttributes<HTMLDivElement> & {
 
 function PreLoader({ delay, onLoadingComplete, ...rest }: PreLoaderProps) {
   const progressBarRef = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
     const timeout = setTimeout(() => onLoadingComplete(), delay);
     if (progressBarRef.current) {
       progressBarRef.current.classList.add("!w-full");
     }
+
     return () => {
       clearTimeout(timeout);
     };
-  }, [delay]);
+  }, [delay, progressBarRef.current]);
 
   return (
-    <div {...rest} className="flex h-full w-full flex-col items-center justify-center">
+    <div {...rest} className="flex h-full w-full flex-col items-center justify-center backdrop-blur">
       <div>
-        <h1 className="mb-4 animate-pulse text-center text-xl font-thin md:mb-6 md:text-2xl">
-          Wait a moment...
-        </h1>
         <div className="w-60 rounded-full bg-gray-200 p-1 sm:w-72 md:w-80 lg:w-96 dark:bg-slate-700">
           <div
             ref={progressBarRef}

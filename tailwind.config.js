@@ -7,7 +7,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        nunito: ['"Nunito"', ...defaultTheme.fontFamily.sans],
+        inter: ['"Inter"', ...defaultTheme.fontFamily.sans],
       },
       animation: {
         ["ping-once"]: "ping 1s ease-in-out 1",
