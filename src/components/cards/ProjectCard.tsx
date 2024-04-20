@@ -1,4 +1,5 @@
 import { ArrowTopRightOnSquareIcon, ArrowUpRightIcon } from "@heroicons/react/24/solid";
+import classNames from "classnames";
 import React, { useRef } from "react";
 import { NavLink } from "react-router-dom";
 import Link from "src/components/Link";
@@ -15,7 +16,7 @@ function ProjectCard({ project, className }: ProjectCardProps) {
   const projectLinkRef = useRef<HTMLAnchorElement>(null);
 
   return (
-    <Card className={className}>
+    <Card className={classNames("group", className)}>
       <div className="relative z-10 flex flex-col sm:flex-row">
         <div className="hidden w-3/12 sm:block">
           <div className="relative mr-4 mt-1.5 overflow-hidden rounded-md group-hover:border-gray-300 dark:border-none">
@@ -27,23 +28,11 @@ function ProjectCard({ project, className }: ProjectCardProps) {
             <h4
               onClick={(e) => e.stopPropagation()}
               aria-label="Company name"
-              className="flex text-xl font-bold">
-              {project.slug ? (
-                <NavLink
-                  to={"/projects/" + project.slug}
-                  ref={descriptionLinkRef}
-                  aria-label={`See more detailed info about ${project.name}`}
-                  title={`See more detailed info about ${project.name}`}
-                  className="link-color dark:black">
-                  <span>{project.name}</span>
-                  <ArrowUpRightIcon className="mb-1 ml-1 inline h-4 w-4 shrink-0 transition-transform md:group-hover:-translate-y-px md:group-hover:translate-x-px" />
-                </NavLink>
-              ) : (
-                <span>{project.name}</span>
-              )}
+              className="mb-2 flex text-xl font-bold">
+              {project.name}
             </h4>
           </header>
-          <p aria-label="Project description" className="muted-text-color dark:text-slate-400">
+          <p aria-label="Project description" className="muted-text-color mb-1 text-sm dark:text-slate-400">
             {project.shortDescription}
           </p>
           <div className="my-1">
@@ -59,7 +48,7 @@ function ProjectCard({ project, className }: ProjectCardProps) {
                 href={project.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="sm:group-hover:opacity-100 sm:dark:opacity-30">
+                className="mb-2 inline-block sm:group-hover:opacity-100 sm:dark:opacity-30">
                 <span>Visit</span>
                 <span>
                   <ArrowTopRightOnSquareIcon className="mb-1 ml-2 inline h-4 w-4" />
@@ -67,12 +56,23 @@ function ProjectCard({ project, className }: ProjectCardProps) {
               </Link>
             </div>
           )}
-          <footer>
+          <div>
             <Tags
               aria-label={`Used tech stack in ${project.name} project`}
               tags={project.tags}
-              className="mt-2"
+              className="mb-2"
             />
+          </div>
+          <footer className="py-3 text-right">
+            <NavLink
+              to={"/projects/" + project.slug}
+              className="dark:black group rounded-full bg-slate-300/30 px-4 py-2 text-base text-black transition-colors md:hover:text-sky-500 md:group-hover:bg-slate-300/50 dark:bg-slate-800/40 dark:text-white dark:md:group-hover:bg-slate-800"
+              ref={descriptionLinkRef}
+              aria-label={`Learn about ${project.name}`}
+              title={`Learn about ${project.name}`}>
+              <span>Learn more</span>
+              <ArrowUpRightIcon className="mb-1 ml-1 inline h-4 w-4 shrink-0 transition-transform md:group-hover:-translate-y-px md:group-hover:translate-x-px" />
+            </NavLink>
           </footer>
         </div>
       </div>

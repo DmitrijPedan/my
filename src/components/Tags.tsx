@@ -7,11 +7,11 @@ export type TagsProps = React.HTMLAttributes<HTMLUListElement> & {
 
 function Tags({ tags, className, ...rest }: TagsProps) {
   return tags ? (
-    <ul className={classNames("-mx-1 flex flex-wrap", className)} {...rest}>
+    <ul className={classNames("-mx-1 flex flex-wrap text-sm", className)} {...rest}>
       {tags.map((tag) => (
         <li
           key={tag}
-          className="m-1 rounded-full bg-sky-100 px-3 py-1 text-sm text-sky-500 shadow-sm dark:bg-sky-900/30 dark:text-sky-400 dark:shadow-none">
+          className="m-1 rounded-full bg-sky-100 px-3 py-1 text-sky-500 shadow-sm dark:bg-sky-900/30 dark:text-sky-400 dark:shadow-none">
           {tag}
         </li>
       ))}
