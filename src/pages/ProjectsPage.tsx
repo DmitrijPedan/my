@@ -1,4 +1,4 @@
-import { ArrowTopRightOnSquareIcon, ArrowUpRightIcon } from "@heroicons/react/24/solid";
+import { ArrowTopRightOnSquareIcon, ArrowUpRightIcon, MagnifyingGlassIcon } from "@heroicons/react/24/solid";
 import classNames from "classnames";
 import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
@@ -10,27 +10,71 @@ import type { Project } from "src/constants/projects";
 import { Page } from "src/layout";
 
 export function ProjectsPage() {
-  const [projects, setProjects] = useState<Project[]>([]);
+  const [projects, setProjects] = useState<Project[]>(PROJECTS);
+  const [filterValue, setFilterValue] = useState<string>("");
 
   useEffect(() => {
-    setProjects(PROJECTS);
-  }, []);
+    if (filterValue) {
+      setProjects(
+        PROJECTS.filter((project) => {
+          return project.tags.some((tag) => tag.toLowerCase().indexOf(filterValue.toLowerCase()) !== -1);
+        })
+      );
+    } else {
+      setProjects(PROJECTS);
+    }
+  }, [filterValue]);
+
+  const filterTagsCallback = (tag: string) => {
+    if (filterValue) {
+      const v = filterValue.toLowerCase();
+      return tag.toLowerCase().indexOf(v) !== -1;
+    } else {
+      return true;
+    }
+  };
 
   return (
     <Page className="max-w-7xl">
-      <div className="flex animate-fade-in-sm flex-col">
-        <table className="table-auto">
-          <thead className="muted-border-color border-b text-left font-bold text-black dark:text-white">
+      <div className="flex min-h-[70vh] animate-fade-in-sm flex-col">
+        <table className="mb-10 table-auto">
+          <thead className="muted-border-color main-bg-color sticky top-10 border-b text-left font-bold text-black dark:text-white">
             <Row>
               <Cell>Period</Cell>
               <Cell>Name</Cell>
               <Cell className="hidden md:table-cell">Role</Cell>
               <Cell className="hidden sm:table-cell">Developed for</Cell>
-              <Cell className="hidden md:table-cell">Tags</Cell>
+              <Cell className="hidden md:table-cell">
+                <div className="flex justify-between">
+                  <span className="mr-2">Tags</span>
+                  <div className="relative">
+                    <input
+                      type="text"
+                      className="rounded-md bg-slate-100 py-1 pl-10 text-sm font-normal outline-none placeholder:font-normal placeholder:text-black dark:bg-slate-800 dark:placeholder:text-slate-400"
+                      placeholder="find ..."
+                      onChange={(e) => setFilterValue(e.target.value)}
+                    />
+                    <MagnifyingGlassIcon
+                      className={classNames(
+                        "absolute left-2 top-1/2 h-5 w-5 -translate-y-1/2 transform",
+                        filterValue && "primary-text-color",
+                        projects.length === 0 && "!text-red-500"
+                      )}
+                    />
+                  </div>
+                </div>
+              </Cell>
               <Cell>Link</Cell>
             </Row>
           </thead>
-          <tbody>
+          <tbody className={classNames(projects.length === 0 && "h-full")}>
+            {projects.length === 0 && (
+              <Row>
+                <td colSpan={6} className="py-20 text-center">
+                  <p className="muted-text-color">No results found</p>
+                </td>
+              </Row>
+            )}
             {projects.map((project) => (
               <Row key={project.slug} className="muted-text-color group cursor-default transition-colors">
                 <Cell>{project.year}</Cell>
@@ -47,7 +91,7 @@ export function ProjectsPage() {
                 <Cell className="hidden md:table-cell">{project.role}</Cell>
                 <Cell className="hidden sm:table-cell">{project.developedFor}</Cell>
                 <Cell className="hidden max-w-96 !py-3 md:table-cell">
-                  <Tags tags={project.tags} />
+                  <Tags tags={project.tags.filter(filterTagsCallback)} />
                 </Cell>
                 <Cell className="">
                   {project.private ? (
@@ -74,7 +118,7 @@ export function ProjectsPage() {
             ))}
           </tbody>
         </table>
-        <HomeButton className="mt-10" />
+        <HomeButton className="mt-auto" />
       </div>
     </Page>
   );

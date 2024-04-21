@@ -64,7 +64,7 @@ function PageAnchors({ className }: React.HTMLAttributes<HTMLDivElement>) {
                 aria-label={`Scroll to ${anchor.title} section`}
                 href={`#${anchor.elementId}`}
                 className={classNames(
-                  "text-sm ",
+                  "text-sm",
                   anchor.isActive ? "font-semibold text-sky-500" : "text-slate-500 dark:text-slate-400"
                 )}>
                 {anchor.title}

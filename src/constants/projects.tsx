@@ -49,6 +49,7 @@ export const PROJECTS: Project[] = [
       "Bitbucket Pipelines",
       "AWS Transcribe",
       "WebSockets",
+      "REST API",
     ],
     detailedInfo: {
       fillImage: PROJECTS_IMAGES_PATH + "/st-video/" + "full.webp",
@@ -123,7 +124,17 @@ export const PROJECTS: Project[] = [
     priority: true,
     developedFor: "SimpleTherapy inc.",
     role: "Full-stack",
-    tags: ["TypeScript", "Next.js", "React", "Postgres", "Cal.Com", "Google Maps API"],
+    tags: [
+      "TypeScript",
+      "Next.js",
+      "React",
+      "Postgres",
+      "Cal.Com",
+      "Google Maps API",
+      "Docker",
+      "AWS",
+      "REST API",
+    ],
     detailedInfo: {
       fillImage: PROJECTS_IMAGES_PATH + "/st-booking/" + "full.webp",
       fullDescription: (
@@ -281,6 +292,7 @@ export const PROJECTS: Project[] = [
       "Bitbucket",
       "Bitbucket Pipelines",
       "AWS",
+      "REST API",
     ],
     detailedInfo: {
       fillImage: PROJECTS_IMAGES_PATH + "/hch-site/" + "full.webp",
@@ -366,7 +378,7 @@ export const PROJECTS: Project[] = [
     developedFor: "Javelin",
     link: "https://hailopay.ie",
     role: "Front-end",
-    tags: ["TypeScript", "Angular", "Angular Universal", "Angular Material IU"],
+    tags: ["TypeScript", "Angular", "Angular Universal", "Angular Material IU", "REST API"],
     detailedInfo: {
       fillImage: PROJECTS_IMAGES_PATH + "/hailopay/" + "full.webp",
       fullDescription: (
