@@ -76,6 +76,13 @@ const saveConsentData = (data: ConsentDataForSaving | null) => {
   Cookie.set(COOKIE_CONSENT_KEY, JSON.stringify(data), { expires: 365 });
 };
 
+const removeAllCookies = () => {
+  const cookies = Cookie.get();
+  for (const cookie in cookies) {
+    Cookie.remove(cookie);
+  }
+};
+
 function CookieConsent() {
   const { showCookieConsent, setShowCookieConsent } = useAppContext();
   const [consent, setConsent] = useState<Consent | null>(null);
@@ -83,6 +90,7 @@ function CookieConsent() {
   const [showDetails, setShowDetails] = useState<boolean>(false);
 
   useEffect(() => {
+    console.log("CookieConsent mounted", Cookie.get());
     const saved: ConsentDataForSaving | null = getSavedConsent();
     if (saved) {
       setConsent({
@@ -128,7 +136,7 @@ function CookieConsent() {
       items: consent.items.map((i) => ({ ...i, checked: !i.readonly ? false : i.checked })),
     };
     setConsent(updated);
-    saveConsentData(getDataForSaving(updated));
+    removeAllCookies();
     setShowCookieConsent(false);
   };
 
