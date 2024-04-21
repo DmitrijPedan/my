@@ -1,4 +1,7 @@
+import classNames from "classnames";
+import React from "react";
 import Link from "src/components/Link";
+import PageAnchors from "src/components/PageAnchors";
 import SocialLinks from "src/components/SocialLinks";
 import { GoToProjects } from "src/components/buttons";
 import ExperienceCard from "src/components/cards/ExperienceCard";
@@ -19,12 +22,21 @@ export function HomePage() {
               Solving complex problems and creating intuitive, dynamic user interfaces. <br />I am ready to
               bring any of your ideas to life.
             </p>
+            <div className="mt-12 hidden lg:block">
+              <p className="main-text-color mb-3 text-sm font-bold">On this page:</p>
+              <PageAnchors />
+            </div>
             <SocialLinks className="mt-8 sm:mt-12 lg:mt-auto" />
           </div>
         </div>
         <div className="mt-20 w-full pl-0 lg:mt-0 lg:w-8/12 lg:pl-12">
-          <section aria-label="Summary" className="mb-10 leading-7 sm:mb-14 md:mb-20 dark:text-slate-400">
-            <h3 className="sr-only">About me</h3>
+          <section
+            id="aboutSection"
+            aria-label="Summary"
+            className="mb-10 scroll-mt-20 leading-7 sm:mb-14 md:mb-20 dark:text-slate-400"
+            data-observed="true"
+            data-label="About">
+            <Heading className="sr-only">About</Heading>
             <p className="mb-4">
               Hello, and welcome to my digital space! I’m a passionate and creative web developer specializing
               in creating high-quality web applications. With over 5 years of hands-on
@@ -67,8 +79,12 @@ export function HomePage() {
               expectations.
             </p>
           </section>
-          <section id="myExperience" className="mb-10 scroll-mt-20 sm:mb-14 md:mb-20">
-            <h3 className="main-text-color mb-4 text-center text-2xl font-bold md:text-left">Experience</h3>
+          <section
+            id="myExperience"
+            className="mb-10 scroll-mt-20 sm:mb-14 md:mb-20"
+            data-observed="true"
+            data-label="Experience">
+            <Heading>Experience</Heading>
             <ul role="list">
               {MY_EXPERIENCE.map((experience) => (
                 <li key={experience.link} className="mb-4 md:mb-6">
@@ -77,8 +93,8 @@ export function HomePage() {
               ))}
             </ul>
           </section>
-          <section id="myProjects" className="scroll-mt-20">
-            <h3 className="main-text-color mb-4 text-center text-2xl font-bold md:text-left">Portfolio</h3>
+          <section id="myProjects" className="scroll-mt-20" data-observed="true" data-label="Portfolio">
+            <Heading>Portfolio</Heading>
             <ul role="list">
               {PROJECTS.filter((project, i) => project.priority).map((project) => (
                 <li key={project.slug} className="mb-4 md:mb-6">
@@ -93,3 +109,11 @@ export function HomePage() {
     </Page>
   );
 }
+
+const Heading = ({ children, className, ...rest }: React.HTMLAttributes<HTMLHeadElement>) => (
+  <h3
+    className={classNames("main-text-color mb-4 text-center text-2xl font-bold md:text-left", className)}
+    {...rest}>
+    {children}
+  </h3>
+);

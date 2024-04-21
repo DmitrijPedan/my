@@ -90,7 +90,6 @@ function CookieConsent() {
   const [showDetails, setShowDetails] = useState<boolean>(false);
 
   useEffect(() => {
-    console.log("CookieConsent mounted", Cookie.get());
     const saved: ConsentDataForSaving | null = getSavedConsent();
     if (saved) {
       setConsent({
