@@ -94,7 +94,7 @@ function CookieConsent() {
       });
     } else {
       setConsent(defaultConsent);
-      setTimeout(() => setShowCookieConsent(true), 0);
+      setTimeout(() => setShowCookieConsent(true), 3000);
     }
   }, []);
 
