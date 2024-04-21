@@ -14,22 +14,20 @@ export function HomePage() {
         <div className="muted-text-color w-full self-start lg:sticky lg:top-20 lg:w-4/12">
           <div className="flex flex-col lg:min-h-[75vh]">
             <h1 className="main-text-color mb-4 text-4xl font-bold md:text-5xl">Dmytro Pedan</h1>
-            <h2 className="mb-5 text-lg sm:text-xl md:mb-8 md:text-2xl">Frontend Engineer</h2>
+            <h2 className="mb-5 text-lg sm:text-xl md:mb-8 md:text-2xl">Front-end Engineer</h2>
             <p className="">
-              Creating seamless and vibrant web solutions, I&apos;m, ready to bring your digital vision to
-              life.
+              Solving complex problems and creating intuitive, dynamic user interfaces. <br />I am ready to
+              bring any of your ideas to life.
             </p>
             <SocialLinks className="mt-8 sm:mt-12 lg:mt-auto" />
           </div>
         </div>
         <div className="mt-20 w-full pl-0 lg:mt-0 lg:w-8/12 lg:pl-12">
-          <section
-            aria-label="Summary"
-            className="mb-10 leading-7 sm:mb-14 md:mb-20 lg:pl-2 dark:text-slate-400">
+          <section aria-label="Summary" className="mb-10 leading-7 sm:mb-14 md:mb-20 dark:text-slate-400">
             <h3 className="sr-only">About me</h3>
             <p className="mb-4">
-              Hello, and welcome to my digital space! I’m a passionate and creative web developer dedicated to
-              crafting seamless web experiences. With more than 5 years of hands-on
+              Hello, and welcome to my digital space! I’m a passionate and creative web developer specializing
+              in creating high-quality web applications. With over 5 years of hands-on
               <Link
                 aria-label="Go to the Experience section"
                 title="Go to the Experience section"
@@ -37,7 +35,7 @@ export function HomePage() {
                 className="mx-1">
                 experience
               </Link>
-              in the tech industry alongside the talented team at
+              in the tech industry with the talented team at
               <Link
                 aria-label="Open Codevery.com in a new tab"
                 title="Open Codevery.com in a new tab"
@@ -55,7 +53,7 @@ export function HomePage() {
               an eye for detail and a commitment to following best practices.
             </p>
             <p className="mb-4">
-              In this portfolio, you&apos;ll find a
+              In this portfolio, you will find a
               <Link
                 aria-label="Go to the Projects section"
                 title="Go to the Projects section"
@@ -70,7 +68,7 @@ export function HomePage() {
             </p>
           </section>
           <section id="myExperience" className="mb-10 scroll-mt-20 sm:mb-14 md:mb-20">
-            <h3 className="main-text-color mb-4 text-2xl font-bold lg:pl-3">Experience</h3>
+            <h3 className="main-text-color mb-4 text-center text-2xl font-bold md:text-left">Experience</h3>
             <ul role="list">
               {MY_EXPERIENCE.map((experience) => (
                 <li key={experience.link} className="mb-4 md:mb-6">
@@ -80,7 +78,7 @@ export function HomePage() {
             </ul>
           </section>
           <section id="myProjects" className="scroll-mt-20">
-            <h3 className="main-text-color mb-4 text-2xl font-bold lg:pl-3">Portfolio</h3>
+            <h3 className="main-text-color mb-4 text-center text-2xl font-bold md:text-left">Portfolio</h3>
             <ul role="list">
               {PROJECTS.filter((project, i) => project.priority).map((project) => (
                 <li key={project.slug} className="mb-4 md:mb-6">

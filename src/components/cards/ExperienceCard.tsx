@@ -40,7 +40,10 @@ function ExperienceCard({ experience, className }: JobCardProps) {
             </p>
           </header>
           <div
-            className={classNames("muted-text-color dark:text-slate-400", collapsed && "line-clamp-6")}
+            className={classNames(
+              "muted-text-color text-sm dark:text-slate-400",
+              collapsed && "line-clamp-6"
+            )}
             aria-label={`Responsibilities in ${experience.company}`}>
             {experience.responsibilities}
           </div>

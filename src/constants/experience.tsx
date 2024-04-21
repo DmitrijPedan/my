@@ -16,7 +16,7 @@ export const MY_EXPERIENCE: WorkExperience[] = [
     to: "present",
     company: "Codevery LLC",
     link: "https://codevery.com",
-    position: "Frontend Engineer",
+    position: "Front-end/Full-stack Engineer",
     responsibilities: (
       <ul className="ml-4 list-disc">
         <li>
