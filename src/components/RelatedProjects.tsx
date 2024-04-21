@@ -12,7 +12,7 @@ interface RelatedProjectsProps {
 export function RelatedProjects({ projects, className }: RelatedProjectsProps) {
   return projects?.length ? (
     <div className={classNames("", className)}>
-      <h4 className="main-text-color mb-2 text-lg">Related projects:</h4>
+      <h2 className="main-text-color mb-2 text-lg">Related projects:</h2>
       <table className={classNames("table-full", className)}>
         <tbody>
           {projects.map((project) => (

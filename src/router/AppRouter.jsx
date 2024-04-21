@@ -16,7 +16,7 @@ export const router = createBrowserRouter(
       element: <Outlet />,
       handle: {
         breadCrumb: () => (
-          <NavLink className="link-color" to="/projects">
+          <NavLink aria-label="Go to the projects page" className="link-color" to="/projects">
             projects
           </NavLink>
         ),

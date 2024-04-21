@@ -48,7 +48,7 @@ function ProjectCard({ project, className }: ProjectCardProps) {
                 href={project.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mb-2 inline-block sm:group-hover:opacity-100 sm:dark:opacity-30">
+                className="mb-2 inline-block">
                 <span>Visit</span>
                 <span>
                   <ArrowTopRightOnSquareIcon className="mb-1 ml-2 inline h-4 w-4" />

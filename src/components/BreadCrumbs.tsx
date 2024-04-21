@@ -9,6 +9,7 @@ function BreadCrumbs() {
     <ol className="flex items-center">
       <li className="mr-2 flex items-center">
         <NavLink
+          aria-label="Go to the Home page"
           to="/"
           className={
             (classNames("link-color group flex items-center text-lg font-bold"),
@@ -16,7 +17,6 @@ function BreadCrumbs() {
           }>
           <HomeIcon className="mr-2 inline-block h-6 w-6" />
         </NavLink>
-        {/* {crumbs.length > 0 && <span className="mx-2">/</span>} */}
       </li>
       {matches
         .filter((match: any) => Boolean(match.handle?.breadCrumb))

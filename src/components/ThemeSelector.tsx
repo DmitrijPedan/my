@@ -27,6 +27,7 @@ function ThemeSelector({ className }: { className?: string }) {
   return (
     <div className={classNames("relative", className)} onClick={(e) => e.stopPropagation()}>
       <button
+        aria-label="Select theme"
         onClick={() => setOpened((prev) => !prev)}
         className={classNames(
           "rounded-md bg-gray-100 p-2 text-lg dark:bg-slate-700",
@@ -51,6 +52,7 @@ function ThemeSelector({ className }: { className?: string }) {
           {ALLOWED_THEMES.map((theme) => (
             <li key={theme.value}>
               <button
+                aria-label={`Select ${theme.label} theme`}
                 className={classNames(
                   "w-full rounded-sm px-2 py-1 hover:bg-gray-300 dark:hover:bg-slate-800",
                   currentTheme === theme.value && "primary-text-color"
