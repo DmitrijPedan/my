@@ -71,6 +71,7 @@ function ProjectCard({ project, className }: ProjectCardProps) {
               aria-label={`Learn about ${project.name}`}
               title={`Learn about ${project.name}`}>
               <span>Learn more</span>
+              <span className="sr-only">{` about ${project.name}`}</span>
               <ArrowUpRightIcon className="mb-1 ml-1 inline h-4 w-4 shrink-0 transition-transform md:group-hover:-translate-y-px md:group-hover:translate-x-px" />
             </NavLink>
           </footer>
