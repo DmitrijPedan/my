@@ -133,8 +133,8 @@ function CookieConsent() {
   };
 
   return showCookieConsent ? (
-    <div className="fixed bottom-4 left-4 z-50">
-      <div className="main-bg-color main-text-color w-72 animate-fade-in-md rounded-lg border border-slate-400 p-2 text-sm text-gray-800 dark:border-white">
+    <div className="fixed bottom-0 left-0 z-50 w-full p-4 xs:max-w-[350px]">
+      <div className="main-bg-color main-text-color w-full animate-fade-in-md rounded-lg border border-slate-400 p-2 text-sm text-gray-800 dark:border-white">
         <header className="flex justify-between">
           <button aria-label="Close cookie consent popup" className=" ml-auto hover:scale-110">
             <XMarkIcon className="h-6 w-6" onClick={() => setShowCookieConsent(!showCookieConsent)} />
@@ -150,7 +150,7 @@ function CookieConsent() {
         <div className="mb-3 flex flex-col">
           {consent &&
             consent.items.map((item) => (
-              <div key={item.name} className="mb-2 flex flex-wrap items-center">
+              <div key={item.name} className="mb-2 flex flex-wrap items-center text-base sm:text-sm">
                 <input
                   id={item.name}
                   type="checkbox"
@@ -170,7 +170,7 @@ function CookieConsent() {
                   }}
                   className="h-4 w-4 rounded border-gray-300 bg-gray-100 text-sky-600 focus:ring-1 focus:ring-sky-500 dark:border-gray-600 dark:bg-gray-700 dark:ring-offset-gray-800 dark:focus:ring-sky-600"
                 />
-                <label htmlFor={item.name} className="ms-2 text-sm font-medium">
+                <label htmlFor={item.name} className="ms-2 font-medium">
                   {item.displayName}
                 </label>
                 {showDetails && <p className="muted-text-color pl-6 text-xs">{item.description}</p>}
@@ -202,7 +202,7 @@ function CTAButton({ children, className, ...rest }: React.HTMLAttributes<HTMLBu
   return (
     <button
       className={classNames(
-        "min-w-32 rounded-full border border-slate-400 px-3 py-1 dark:border-white",
+        "min-w-32 rounded-full border border-slate-400 px-3 py-1 text-base sm:text-sm dark:border-white",
         className
       )}
       {...rest}>

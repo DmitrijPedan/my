@@ -99,6 +99,10 @@ module.exports = {
       tablet: "0.75 / 1",
       desktop: "16 / 9",
     },
+    screens: {
+      xs: "475px",
+      ...defaultTheme.screens,
+    },
   },
   plugins: [],
 };
