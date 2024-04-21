@@ -1,5 +1,5 @@
 import BreadCrumbs from "src/components/BreadCrumbs";
-import ThemeSelector from "src/components/ThemeSelector";
+import Preferences from "src/components/Preferences";
 
 function Header() {
   return (
@@ -8,8 +8,8 @@ function Header() {
         <div className="flex h-10 items-center">
           <BreadCrumbs />
         </div>
-        <div className="ml-auto">
-          <ThemeSelector />
+        <div className="ml-auto flex space-x-2">
+          <Preferences />
         </div>
       </nav>
     </header>

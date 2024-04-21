@@ -22,12 +22,28 @@
         function gtag() {
           dataLayer.push(arguments);
         }
+        gtag("consent", "default", {
+          ad_user_data: "denied",
+          ad_storage: "denied",
+          ad_personalization: "denied",
+          analytics_storage: "denied",
+        });
         gtag("js", new Date());
         gtag("config", "G-SVD9ZJ24PM");
+        window.gaConsentGranted = function () {
+          console.log("GA consent granted");
+          gtag("consent", "update", {
+            ad_user_data: "granted",
+            ad_storage: "granted",
+            ad_personalization: "granted",
+            analytics_storage: "granted",
+          });
+        };
       } catch (error) {
         console.error("Google tag error:", error);
       }
     </script>
+    <!-- end Google tag (gtag.js) -->
   </head>
   <body
     class="main-bg-color main-text-color overflow-x-hidden overflow-y-scroll scroll-smooth font-inter antialiased">
