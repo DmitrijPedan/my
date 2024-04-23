@@ -56,7 +56,7 @@ const LINKS = [
     ),
   },
   {
-    href: "https://drive.google.com/file/d/1Xr8dKEkmgPD-J8r_JNTPGoSn_e6-zqTv/view?usp=drive_link",
+    href: "https://drive.google.com/file/d/1-G23K3T48Zw34apBVtmmFPU4KpLrKBrf/view?usp=drive_link",
     title: "CV",
     label: "Open my CV in a new tab",
     newTab: true,
